@@ -1,0 +1,5 @@
+language: php
+php:
+ - 7.0
+dist: xenial
+script: phpunit Test.php
