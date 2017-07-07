@@ -8,5 +8,5 @@ before_install:
 script: phpunit Test.php
 # Customize when the notification emails are sent.
 notifications:
-    on_success: never
+    on_success: always
     on_failure: always
