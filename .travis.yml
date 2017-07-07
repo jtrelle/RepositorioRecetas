@@ -1,0 +1,25 @@
+language: php
+
+dist: xenial 
+
+php:
+- 7.0
+
+env:
+- BD=pgsql
+
+before_install:
+- sudo apt-get update -q
+- sudo apt-get install apache2 -y
+
+
+before_script: true
+
+script: 
+- phpunit prueba.php
+
+
+notifications:
+  email:
+    - jenniffertrelles@gmail.com
+irc: "irc.freenode.org#yourfavouriteroomfortravis"
