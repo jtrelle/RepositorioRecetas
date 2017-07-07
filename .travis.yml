@@ -8,5 +8,9 @@ before_install:
 script: phpunit Test.php
 # Customize when the notification emails are sent.
 notifications:
+ email:
+ - jtrelles@espol.edu.ec
+ - isamaleo@espol.edu.ec
+ - mmbaque@espol.edu.ec
     on_success: always
     on_failure: always
