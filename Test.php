@@ -1,4 +1,5 @@
 <?php
+use Tests\TestCase;
 class Test extends PHPUnit_Framework_Test
 {
 	public function testOnePlusOne() {
