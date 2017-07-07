@@ -2,4 +2,7 @@ language: php
 dist: xenial
 php:
  - 7.0
+before_install:
+    - echo "hhvm.php7.all=1" >> /tmp/hhvm.php.ini
+    - phpenv config-add /tmp/hhvm.php.ini
 script: phpunit Test.php
