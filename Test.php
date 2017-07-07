@@ -3,7 +3,7 @@ use Tests\TestCase;
 class Test extends PHPUnit_Framework_Test
 {
 	public function testOnePlusOne() {
-		$this->assertEquals(1+1,2);
+		$this->assertEquals(1,2);
   	}
 }
 ?>
