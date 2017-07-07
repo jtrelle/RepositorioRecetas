@@ -1,8 +1,9 @@
+
 <?php
-class cal
+class Test extends PHPUnit_Framework_TestCase
 {
-public function add($a, $b)
-{
-return $a + $b;
+  public function testOnePlusOne() {
+    $this->assertEquals(1+1,2);
+    }
 }
-}
+?>
