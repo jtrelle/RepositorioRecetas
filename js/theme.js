@@ -143,7 +143,17 @@ var slideshow = {
 			$slides.eq(index).addClass("active");
 		}
 	}
-}
+};
+
+
+$( document ).ready(function() {
+    $('.burger-span').click(function () {
+        $('.burger').toggle( "slide");
+        console.log("sdasd");
+    });
+});
+
+
 
 
 
