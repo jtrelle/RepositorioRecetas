@@ -36,135 +36,133 @@
 
 <body>
 
-<div id="header" class="terminal-header ">
+  <div id="header" class="terminal-header ">
 
-    <!-- BARRA de Navegacion Large Screen-->
-    <div class="regular-header hidden-sm hidden-md hidden-xs" >
-        <!-- Logo -->
-        <div class="comp pull-left" style="margin-top: 8px;">
-            <a href="../index.html" class="hdr-btn link-reset belo-container">
-                <img style="width:160px;" src="../images/logos/logo.png"/>
-            </a>
-        </div>
+        <!-- BARRA de Navegacion Large Screen-->
+        <div class="regular-header hidden-sm hidden-md hidden-xs">
+            <!-- Logo -->
+            <div class="comp pull-left" style="margin-top: 8px;">
+                <a href="index.html" class="hdr-btn link-reset belo-container">
+                    <img alt="" style="width:160px;" src="images/logos/logo.png" />
+                </a>
+            </div>
 
-        <div class="login-class pull-right">
+            <div class="login-class pull-right">
 
-            <!-- Iniciar Sesion -->
-            <div class="comp pull-right  ">
-                <a href="../pages/ingresar.html" class="hdr-btn link-reset demo-dialog-open-button login-item">
+                <!-- Iniciar Sesion -->
+                <div class="comp pull-right  ">
+                    <a href="pages/ingresar.html" class="hdr-btn link-reset demo-dialog-open-button login-item">
                     INICIAR SESIÓN
                 </a>
-            </div>
+                </div>
 
-            <!-- Registro -->
-            <div  class="comp pull-right  ">
-                <a href="../pages/registro.html" data-header-view="true" class="hdr-btn link-reset login-item">
+                <!-- Registro -->
+                <div class="comp pull-right  ">
+                    <a href="pages/registro.html" data-header-view="true" class="hdr-btn link-reset login-item">
                     REGÍSTRATE
                 </a>
+                </div>
             </div>
-        </div>
 
-        <!-- Búsqueda -->
+            <!-- Búsqueda -->
+<div class="comp pull-right ">
+                <div class="hdr-btn link-reset demo-dialog-open-button login-item">
+                    <input type="text" class="searchbox " placeholder="Buscar">
+                  
+                        <button onclick="window.location.href='pages/buscar.html'" type="submit" class="btn-search"> 
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                   
 
-        <div class="comp pull-right ">
-        <a class="hdr-btn link-reset demo-dialog-open-button login-item">
-            <input type="text" class="searchbox " placeholder="Buscar">
-            <button type="submit" class="btn-search">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
+                </div>
+            </div>
 
-
-        </a>
-    </div>
-
-        <div  class="comp pull-left  " >
-            <a href="../pages/recetas.html" data-header-view="true" class="hdr-btn link-reset menu-item">
+            <div class="comp pull-left  ">
+                <a href="pages/recetas.html" data-header-view="true" class="hdr-btn link-reset menu-item">
                 RECETAS
             </a>
-        </div>
+            </div>
 
-        <div class="comp pull-left  ">
-            <a href="../pages/nutricionistas.html" data-header-view="true" class="hdr-btn link-reset menu-item">
+            <div class="comp pull-left  ">
+                <a href="pages/nutricionistas.html" data-header-view="true" class="hdr-btn link-reset menu-item">
                 NUTRICIONISTAS
             </a>
-        </div>
-        <div  class="comp pull-left">
-            <a href="../pages/contacto.html" data-header-view="true" class="hdr-btn link-reset menu-item">
+            </div>
+            <div class="comp pull-left">
+                <a href="pages/contacto.html" data-header-view="true" class="hdr-btn link-reset menu-item">
                 CONTACTO
             </a>
+            </div>
+
+
         </div>
 
 
-    </div>
+        <!-- BARRA DE NAVEGACIÓN Medium / Small Screen -->
+        <span class="burger-span hidden-lg"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
+
+        <div class="regular-header burger hidden-lg">
+            <!-- Logo -->
+            <span class="burger-span exit"><i class="fa fa-times fa-2x" aria-hidden="true"></i></span>
+
+            <div class="comp pull-left" style="margin-top: 8px;">
+                <a href="index.html" class="hdr-btn link-reset belo-container">
+                    <img alt="" style="width:160px;" src="images/logos/logo.png" />
+                </a>
+            </div>
 
 
-    <!-- BARRA DE NAVEGACIÓN Medium / Small Screen -->
-    <span class="burger-span hidden-lg"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
+            <!--Buscar medio -->
+                  <div class="" style="margin-top: 80px; margin-bottom: 40px">
+                <div class="hdr-btn link-reset demo-dialog-open-button login-item" style="    text-align: center;">
+                    <input type="text" class="searchbox" id="searchbox-medio" placeholder="Buscar">
+                    
+                         <button onclick="window.location.href='pages/buscar.html'" type="submit" class="btn-search">
+                        <i class="fa fa-search" aria-hidden="true" id="searchicon-medio"></i>
+                    </button>
+                   
+                </div>
+            </div>
 
-    <div class="regular-header burger hidden-lg" >
-        <!-- Logo -->
-        <span class="burger-span exit"><i class="fa fa-times fa-2x" aria-hidden="true"></i></span>
-
-        <div class="comp pull-left" style="margin-top: 8px;">
-            <a href="../index.html" class="hdr-btn link-reset belo-container">
-                <img style="width:160px;" src="../images/logos/makerslogo.png"/>
-            </a>
-        </div>
-
-
-        <!--Buscar medio -->
-        <div class="" style="margin-top: 80px; margin-bottom: 40px" align="center">
-            <a class="hdr-btn link-reset demo-dialog-open-button login-item">
-                <input type="text" class="searchbox" id="searchbox-medio" placeholder="Buscar">
-                <button type="submit" class="btn-search">
-                    <i class="fa fa-search" aria-hidden="true" id="searchicon-medio"></i>
-                </button>
-
-
-            </a>
-        </div>
-
-        <div  class="comp" >
-            <a href="../pages/recetas.html" data-header-view="true" class="hdr-btn link-reset menu-item">
+            <div class="comp pull-left">
+                <a href="pages/recetas.html" data-header-view="true" class="hdr-btn link-reset menu-item">
                 RECETAS
             </a>
-        </div>
+            </div>
 
-        <div class="comp">
-            <a href="../pages/nutricionistas.html" data-header-view="true" class="hdr-btn link-reset menu-item">
+            <div class="comp pull-left">
+                <a href="pages/nutricionistas.html" data-header-view="true" class="hdr-btn link-reset menu-item">
                 NUTRICIONISTAS
             </a>
-        </div>
-        <div  class="comp">
-            <a href="../pages/contacto.html" data-header-view="true" class="hdr-btn link-reset menu-item">
+            </div>
+            <div class="comp pull-left">
+                <a href="pages/contacto.html" data-header-view="true" class="hdr-btn link-reset menu-item">
                 CONTACTO
             </a>
-        </div>
+            </div>
 
-        <div class="login-class" style="padding: 2px 0px;">
-            <!-- Iniciar Sesion -->
-            <div class="comp">
-                <a href="../pages/ingresar.html" class="hdr-btn link-reset demo-dialog-open-button login-item">
+            <div class="login-class pull-left" style="padding: 2px 0px;">
+                <!-- Iniciar Sesion -->
+                <div class="comp pull-left">
+                    <a href="pages/ingresar.html" class="hdr-btn link-reset demo-dialog-open-button login-item">
                     INICIAR SESIÓN
                 </a>
-            </div>
+                </div>
 
-            <!-- Registro -->
-            <div  class="comp">
-                <a href="../pages/registro.html" data-header-view="true" class="hdr-btn link-reset login-item">
+                <!-- Registro -->
+                <div class="comp pull-left">
+                    <a href="pages/registro.html" data-header-view="true" class="hdr-btn link-reset login-item">
                     REGÍSTRATE
                 </a>
+                </div>
             </div>
+
+
+
         </div>
-
-
-
-    </div>
 
 
 </div>
-
-
 <!--       *******  BODY    *******     -->
 
 
