@@ -42,6 +42,31 @@
 span {
 	padding: 5px;
 }
+#alignDiv{
+    margin-top: 75px
+}
+
+input{
+    margin-top: 10px;
+    width: 250px;
+}
+
+label{
+    margin-top: 10px;
+}
+
+button{
+    float:right;
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    margin-top: 25px;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
 
 @media (min-device-width: 996px) and (max-width: 1366px) {
 	#logo {
@@ -65,6 +90,7 @@ span {
 		padding-left: 0px;
 	}
 }
+
 
 @media (min-device-width: 700px) and (max-width: 995px) {
 	.container {
@@ -166,5 +192,11 @@ span {
 		font-size: 11px;
 		padding-left: 0px;
 	}
+    label{
+    display: none;
+}
+    input{
+        width:100%;
+    }
 	
 }
