@@ -915,3 +915,33 @@ transition: all 0.3s ease;
 .meta a:hover {
     color: rgba(0, 0, 0, .87);
 }
+
+
+
+.nutricionistas-img-container{
+    background-color: #a7d0cc;
+          height: 140px;
+    border-radius: 0px 0px 50% 50%;
+}
+
+.nutricionistas-img-container img{
+    width: 100px;
+    height: 100px;
+    margin: 18px 30%;
+}
+
+.nutri-title{
+    font-weight: bold;
+    font-size: 30px;
+     color: #333;
+}
+
+.nutri-grade{
+    font-size: 15px;
+     color:#b7b7b7;
+    font-style: italic;
+}
+
+.nutri{
+    height: 380px;
+}
