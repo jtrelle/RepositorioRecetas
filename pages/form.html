@@ -5,8 +5,6 @@
     <meta charset="utf-8"/>
     <!--<base href="/">-->
 
-    <title></title>
-
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="../css/compiled/frm.css">
     <link rel="stylesheet" type="text/css" href="../css/vendor/animate.css">
@@ -35,15 +33,14 @@
 </head>
 
 <body>
-
-  <div id="header" class="terminal-header ">
+<div id="header" class="terminal-header ">
 
         <!-- BARRA de Navegacion Large Screen-->
         <div class="regular-header hidden-sm hidden-md hidden-xs">
             <!-- Logo -->
             <div class="comp pull-left" style="margin-top: 8px;">
-                <a href="../index.html" class="hdr-btn link-reset belo-container">
-                    <img alt="" style="width:160px;" src="../images/logos/logo.png" />
+                <a href="index.html" class="hdr-btn link-reset belo-container">
+                    <img alt="" style="width:160px;" src="images/logos/logo.png" />
                 </a>
             </div>
 
@@ -115,10 +112,10 @@
             <!--Buscar medio -->
                   <div class="" style="margin-top: 80px; margin-bottom: 40px">
                 <div class="hdr-btn link-reset demo-dialog-open-button login-item" style="    text-align: center;">
-                    <input type="text" class="searchbox" placeholder="Buscar">
+                    <input type="text" class="searchbox" id="searchbox-medio" placeholder="Buscar">
                     
                          <button onclick="window.location.href='pages/buscar.html'" type="submit" class="btn-search">
-                        <i class="fa fa-search" aria-hidden="true" id="searchicon-medio"></i>
+                        <i class="fa fa-search" aria-hidden="true"></i>
                     </button>
                    
                 </div>
@@ -168,7 +165,7 @@
 
 <div>
 
-    <section class="container" style="padding: 30px 0px;background-color: white;" >
+    <div class="container" style="padding: 30px 0px;background-color: white;" >
         
             <div class="row" id="hero" style="position:relative">
             <div class="wrapper-header ttg-searchbox" style="overflow: hidden; padding-top: 49px;">
@@ -237,7 +234,7 @@
         </div>
 
 
-    </section>
+    </div>
 
 
 </div>
