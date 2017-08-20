@@ -28,6 +28,7 @@
 .recetas-contenido p {
     padding-top: 10px;
     height: 100px;
+    overflow: hidden;
 }
 
 .recetas-contenido h4{

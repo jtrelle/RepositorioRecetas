@@ -22,14 +22,6 @@
     margin-left: auto;
 }
 
-body {
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    font-size: 14px;
-    line-height: 1.433;
-    color: #333;
-    background-color: #f7f7f7;
-    -webkit-font-smoothing: antialiased;
-}
 
 body.fixed-header .terminal-header {
     position: fixed;
