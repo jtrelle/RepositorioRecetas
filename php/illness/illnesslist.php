@@ -46,7 +46,7 @@ foreach ($IllnessCollectorObj->showsIllness() as $c){
   echo "<tr>";
   echo "<td>" . $c->getId() . "</td><td>" . $c->getName() . "</td>";
   echo "<td>      <a href='illnessedit.php?id=".$c->getId()."' class='btn btn-info' role='button'>Editar</a>      ";
-  echo "<a href='illnessdelete.php?id=".$c->getId()."' class='btn btn-info' role='button'>Eliminar</a> </td>";
+  echo "<a href='illnessdeleteindatabase.php?id=".$c->getId()."' class='btn btn-info' role='button'>Eliminar</a> </td>";
   echo "</tr>"; 
   echo "</tr>"; 
 }
