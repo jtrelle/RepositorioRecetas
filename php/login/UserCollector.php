@@ -24,28 +24,34 @@ class UserCollector extends Collector
     return $arrayUsers; //Se lo envía a la página para que muestre
   }
 
-
-  function login($username, $password){
-    session_start();
+	
+	
+	  function login($username, $password){
+   
 
     if (!empty($_POST['user'])) {
 
-
-
-
-
   $row = self::$db->getRows("SELECT * FROM users as u WHERE u.username = '". $username . "' AND u.password = '" . $password . "' OR (SELECT email FROM people WHERE id = u.people_id) = '". $username . "' AND u.password = '" . $password . "'");
 
+   
 
       if (!empty($row)) {
-        return true;
+          $id = '';
+           foreach ($row as $c){ 
+            $id = $c{'id'};
+            }
+        
+          $nombre = self::$db->getRows("SELECT username, password, name, surname, email FROM users, people AS p WHERE people_id ='" .$id. "' AND p.id ='" .$id."'");
+        
+        return $nombre;
       }
       else{
-        return false;
+        return null;
       }
 }
 
   }
+	
 
 }
 ?>
