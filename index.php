@@ -69,6 +69,20 @@
 
 <div class="login-class pull-right">
 
+    <div class="comp pull-right  ">
+
+                            <?php 
+                      echo "<a href='php/login/salir.php' class='hdr-btn link-reset demo-dialog-open-button login-item'>Salir</a> "; 
+      
+      
+                        
+                    ?>
+
+                        </div>
+
+  
+  
+  
                 <!-- UER -->
                 <div class="comp pull-right  ">
                    
