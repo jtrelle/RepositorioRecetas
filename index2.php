@@ -18,13 +18,13 @@ session_start();
 
 <aside>
 <?php
-include_once("CommentsCollector.php");//incluye el demoCollector solo una vez
+include_once("RecipeusersCollector.php");//incluye el demoCollector solo una vez
 
 $id =1;
 
-$CommentsCollectorObj = new CommentsCollector();
+$RecipeusersCollectorObj = new RecipeusersCollector();
 
-foreach ($CommentsCollectorObj->showComments() as $c){
+foreach ($RecipeusersCollectorObj->showComments() as $c){
   echo "<div>";
   echo $c->getId() . "    -       " .$c->getEmail();    
                   
