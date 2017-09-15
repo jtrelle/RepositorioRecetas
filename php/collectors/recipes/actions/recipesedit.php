@@ -36,7 +36,7 @@ if (isset($_SESSION['MiAdmin'])){
  
 
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
-  echo "<li><a href='../collectors/users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
+  echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
@@ -61,7 +61,8 @@ $ObjRecipes = $RecipesCollectorObj->showRecipes($id);
     <div class="form-group">
       <label class="control-label col-sm-2">Id:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" for="Usuario" name="id" value="<?php echo $ObjRecipes->getId(); ?>" readonly/>
+        <input type="text" class="form-control" for="Usuario" name="id" value="<?php echo $ObjRecipes->getId(); ? 
+        >" readonly/>
       </div>
     </div>
     <div class="form-group">
@@ -90,17 +91,14 @@ $ObjRecipes = $RecipesCollectorObj->showRecipes($id);
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2">Lists_Id:</label>
-      <div class="col-sm-10">   
-
-
-             
-        <!-- <input type="text" class="form-control" for="pwd" name="listid" value="<?php echo $ObjRecipes->getListsId(); ?>"/> -->
+      <div class="col-sm-10">        
+        <input type="number" class="form-control" for="pwd" name="listid" value="<?php echo $ObjRecipes->getListsId(); ?>"/> 
       </div>
     </div>
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" class="btn btn-default" value="Guardar">Submit</button>
-        <a href="illnessrecipeslist.php" >Cancelar</a>
+        <a href="recipeslist.php" >Cancelar</a>
       </div>
     </div>
   </form>

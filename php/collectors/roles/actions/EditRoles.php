@@ -20,7 +20,7 @@ session_start();
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li><p class='text-info'> Bienvenido Usuario: xxxx</p></li>
-      <li><a href='salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li> 
+      <li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li> 
     </ul> 
   </div>
 
