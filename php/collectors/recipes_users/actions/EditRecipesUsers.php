@@ -60,7 +60,7 @@ $ObjRecipesUsers = $RecipesUsersCollectorObj->showRecipesUser($id);
 
 
 <div class="container">
-  <h2>EDITAR</h2>
+  <h2>EDIITTAR</h2>
   <form class="form-horizontal" action="UpdateRecipesUsers.php" method="post">
 
     <div class="form-group">
