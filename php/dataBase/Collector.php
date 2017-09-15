@@ -20,3 +20,7 @@ class Collector extends dataBase
   {
     self::$db = new dataBase($this->username, $this->password, $this->host, $this->dbname);
   }
+
+}
+
+?>
