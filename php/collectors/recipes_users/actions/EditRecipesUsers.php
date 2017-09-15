@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +31,11 @@ if (isset($_SESSION['MiSession'])) {
 
 if (isset($_SESSION['MiAdmin'])){
 
+
+  
+
+
+
   #echo "<p> Hola Usuario: " . $_SESSION['MiSesion']. "    <a href='salir.php' class='btn btn-info' role='button'>Salir</a>";
  
 
@@ -47,15 +51,6 @@ echo "valor de id es". $id;
 
 include_once("../RecipesUsersCollector.php");
 include_once('../../../classes/Recipes_users.php');
-
-include_once("../../users/UserCollector.php");
-
-include_once("../../recipes/RecipesCollector.php");
-$recipes= new RecipesCollector();
-$recipesList=$recipes->showsRecipes();
-
-$user=new UserCollector();
-$userList=$user->showUsers();
 
 
 $RecipesUsersCollectorObj = new RecipesUsersCollector();
@@ -78,77 +73,14 @@ $ObjRecipesUsers = $RecipesUsersCollectorObj->showRecipesUser($id);
     <div class="form-group">
       <label class="control-label col-sm-2" for="pwd">Recipes Id:</label>
       <div class="col-sm-10">          
-        <div class="col-sm-10">          
-        
-        
-        <select name="recipes">
-        <?php
-          $cont=0;
-          $id=0;
-          $combobit="";
-         foreach ($recipesList as $datos){ //Hace foreach de cada row del fetch de la base
-          $cont=0;
-          $id=0;
-            foreach ($datos as $datosx){ //Hace foreach de cada row del fetch de la base
-              echo $id;
-              if($cont==5)
-              {
-                if($ObjRecipesUsers->getRecipesId()==$id)
-                  $combobit .="<option value='".$id."' selected>".$datosx."</option>";
-                else
-                  $combobit .="<option value='".$id."'>".$datosx."</option>";
-              }
-              else
-              {
-                $cont=$cont+1;
-                if($cont==1)
-                $id=$datosx;
-              
-              }
-            }
-          }
-          echo $combobit;
-            
-        ?>
-        </select>
-      </div>
+        <input type="text" class="form-control" id="pwd" name="recipes_id" value="<?php echo $ObjRecipesUsers->getRecipesId(); ?>" autofocus required/>
     </div>
     </div>
 
     <div class="form-group">
       <label class="control-label col-sm-2" for="Usuario">Users id:</label>
       <div class="col-sm-10">
-        <select name="users">
-        <?php
-          $cont=0;
-          $id=0;
-          $combobit="";
-         foreach ($userList as $datos){ //Hace foreach de cada row del fetch de la base
-          $cont=0;
-          $id=0;
-            foreach ($datos as $datosx){ //Hace foreach de cada row del fetch de la base
-              echo $id;
-              if($cont==1)
-              {
-                if($ObjRecipesUsers->getUserId()==$id)
-                  $combobit .="<option value='".$id."' selected>".$datosx."</option>";
-                else
-                  $combobit .="<option value='".$id."'>".$datosx."</option>";
-              }
-              else
-              {
-                
-                if($cont==0)
-                  $id=$datosx;
-              
-              }
-              $cont=$cont+1;
-            }
-          }
-          echo $combobit;
-            
-        ?>
-        </select>
+        <input type="text" class="form-control" name="users_id" value="<?php echo $ObjRecipesUsers->getUserId(); ?>" autofocus required/>
     </div>
     </div>
 
