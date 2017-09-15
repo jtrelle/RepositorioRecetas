@@ -1,2 +1,0 @@
-# RepositorioRecetas
-proyecto PHP
