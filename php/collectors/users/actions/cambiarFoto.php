@@ -52,7 +52,7 @@ if (isset($_SESSION['MiSession'])) {
 
 $id=$_GET["id"];
 
-echo "-->".$id;
+
 
   ?>
 

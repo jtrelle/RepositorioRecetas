@@ -20,7 +20,8 @@ session_start();
       <a class="navbar-brand" href="../../../../index.php">Choice Home</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-<?php 
+<?php
+
 if (isset($_SESSION['MiSession'])) {
       echo '<script language="javascript">';
       echo 'alert("No tiene autorización para esta página.");document.location.href="../../../../index.php"';
@@ -46,11 +47,11 @@ if (isset($_SESSION['MiAdmin'])){
 }
 
 $id=$_POST["id"];
-$recipes_id=$_POST["recipes"];
-$users_id=$_POST["users"];
+$recipes_id=$_POST["recipes_id"];
+$users_id=$_POST["users_id"];
+
 echo "Edicion en proceso... </br>";
 include_once("../RecipesUsersCollector.php");
-
 
 
 $RecipesUsersCollectorObj = new RecipesUsersCollector();
@@ -59,6 +60,6 @@ $RecipesUsersCollectorObj->updateRecipesUsers($id,$recipes_id,$users_id);
 
 
 ?>
-<div><a href="ListRecipesUsers.php" class="btn btn-info" role="button">Volver al Inicio</a></div>
+<div><a href="ListRecipesUsers.php">Volver al Inicio</a></div>
 </body>
 </html>

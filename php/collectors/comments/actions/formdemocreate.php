@@ -39,16 +39,17 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</nav>";
 }
 
+$id=$_POST["id"];
 $email=$_POST["email"];
 $message=$_POST["message"];
 $users_id=$_POST["users_id"];
 
-echo "Insercion de datos en proceso... </br>";
-
+echo "Edicion en proceso... </br>";
 include_once("../CommentsCollector.php");
 
 $CommentsCollectorObj = new CommentsCollector();
-$CommentsCollectorObj->createComment($email,$message,$users_id);
+$CommentsCollectorObj->updateComment($id,$email,$message,$users_id);
+
 
 
 ?>
