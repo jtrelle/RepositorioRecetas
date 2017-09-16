@@ -8,7 +8,7 @@ class IllnessCollector extends Collector
   
   function showsIllness() {
     $rows = self::$db->getRows("SELECT * FROM illness ");    //arreglo de objetos bidimensionales    
-    echo "linea 1";
+   
     $arrayIllness= array();        
     foreach ($rows as $c){  //Objeto illness
       $aux = new Illness($c{'id'},$c{'name'}); //Crea un objeto illness
