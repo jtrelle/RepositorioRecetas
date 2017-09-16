@@ -29,30 +29,23 @@ if (isset($_SESSION['MiSession'])) {
     }
 
 
-if (isset($_SESSION['MiAdmin'])){
-
-
-  
-
-
-
-  #echo "<p> Hola Usuario: " . $_SESSION['MiSesion']. "    <a href='salir.php' class='btn btn-info' role='button'>Salir</a>";
- 
+if (isset($_SESSION['MiAdmin'])){ 
 
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
-  echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
+  echo "<li><a href='../collectors/users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
 }
 
 $name=$_POST["name"];
-echo "Insercion de datos en proceso... </br>";
 include_once("../IllnessCollector.php");
 $IllnessCollectorObj = new IllnessCollector();
 $IllnessCollectorObj->createIllness($name);
-echo"Insercion de: " . $name . " en la base</br>";
+
+echo '<script language="javascript">';
+      echo 'alert("Creación de '. $name .' en la base de datos");document.location.href="illnesslist.php"';
+      echo '</script>';
 ?>
-<div><a href="illnesslist.php" class="btn btn-info" role="button">Volver al Inicio</a></div>
 </body>
 </html>
