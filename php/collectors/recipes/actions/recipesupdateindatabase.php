@@ -30,14 +30,6 @@ if (isset($_SESSION['MiSession'])) {
 
 if (isset($_SESSION['MiAdmin'])){
 
-
-  
-
-
-
-  #echo "<p> Hola Usuario: " . $_SESSION['MiSesion']. "    <a href='salir.php' class='btn btn-info' role='button'>Salir</a>";
- 
-
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
   echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
@@ -50,14 +42,16 @@ $listid =$_POST["listid"];
 $preparation = $_POST["preparation"];
 $image=$_POST["image"];
 $id=$_POST["id"];
-echo "Edicion en proceso... </br>";
 
 include_once("../RecipesCollector.php");
 
 $RecipesCollectorObj = new RecipesCollector();
 $RecipesCollectorObj->updateRecipes($id, $image, $preparation, $listid, $description, $name);
-echo "Id: ". $id . " Actualizado a: " . $name . ", " . "</br>";
+
+echo '<script language="javascript">';
+echo 'alert("Actualizacion del id ' . $id . ' con el nombre '. $name .' en la base de datos");document.location.href="recipeslist.php"';
+echo '</script>';
 ?>
-<div><a href="recipeslist.php" class="btn btn-info" role="button">Volver al Inicio</a></div>
+
 </body>
 </html>
