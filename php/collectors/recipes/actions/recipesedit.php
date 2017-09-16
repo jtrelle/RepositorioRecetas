@@ -61,8 +61,7 @@ $ObjRecipes = $RecipesCollectorObj->showRecipes($id);
     <div class="form-group">
       <label class="control-label col-sm-2">Id:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" for="Usuario" name="id" value="<?php echo $ObjRecipes->getId(); ? 
-        >" readonly/>
+        <input type="text" class="form-control" for="Usuario" name="id" value="<?php echo $ObjRecipes->getId(); ?>" readonly/>
       </div>
     </div>
     <div class="form-group">
@@ -91,8 +90,8 @@ $ObjRecipes = $RecipesCollectorObj->showRecipes($id);
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2">Lists_Id:</label>
-      <div class="col-sm-10">        
-        <input type="number" class="form-control" for="pwd" name="listid" value="<?php echo $ObjRecipes->getListsId(); ?>"/> 
+      <div class="col-sm-10">     
+        <input type="number" min="1" max="10" class="form-control" for="pwd" name="listid" value="<?php echo $ObjRecipes->getListsId(); ?>"/> 
       </div>
     </div>
     <div class="form-group">        
