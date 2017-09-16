@@ -15,7 +15,7 @@ class ListCollector extends Collector
 								{
 						  			public static $db;  -->llama a este $db */	        
  
-   echo "linea 1";
+
     $arrayLists= array();  //SE crea el arreglo donde se guardaran los objetos demo      
     foreach ($rows as $c){ //Hace foreach de cada row del fetch de la base
       $aux = new Lists($c{'id'},$c{'name'}); //Crea el nuevo objeto demo
