@@ -84,8 +84,3 @@ echo "<div><a href='listInsert.php' class='btn btn-info' role='button'>New List<
 
 </body>
 </html>
-
- 
-
-
-
