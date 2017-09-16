@@ -45,7 +45,7 @@ include_once("../IllnessCollector.php");
 $IllnessCollectorObj = new IllnessCollector();
 $IllnessCollectorObj->deleteIllness($id);
 echo '<script language="javascript">';
-      echo 'alert("Eliminacion del id' . $id . 'en la base de datos");document.location.href="illnesslist.php"';
+      echo 'alert("Eliminacion del id ' . $id . ' en la base de datos");document.location.href="illnesslist.php"';
       echo '</script>';
 ?>
 
