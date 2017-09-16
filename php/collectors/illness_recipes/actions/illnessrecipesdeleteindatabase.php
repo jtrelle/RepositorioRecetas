@@ -31,13 +31,6 @@ if (isset($_SESSION['MiSession'])) {
 
 
 if (isset($_SESSION['MiAdmin'])){
-
-
-  
-
-
-
-  #echo "<p> Hola Usuario: " . $_SESSION['MiSesion']. "    <a href='salir.php' class='btn btn-info' role='button'>Salir</a>";
  
 
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
@@ -48,14 +41,16 @@ if (isset($_SESSION['MiAdmin'])){
 }
 
 $id=$_GET["id"];
-echo "Eliminacion en proceso... </br>";
 
 include_once("../IllnessRecipesCollector.php");
 
 $IllnessRecipesCollectorObj = new IllnessRecipesCollector();
 $IllnessRecipesCollectorObj->deleteIllnessRecipes($id);
-echo "Eliminado id: ". htmlspecialchars($id) . "</br>";
+
+echo '<script language="javascript">';
+echo 'alert("Eliminacion del id ' . $id . ' en la base de datos");document.location.href="illnessrecipeslist.php"';
+echo '</script>';
 ?>
-<div><a href="illnessrecipeslist.php" class="btn btn-info" role="button">Volver al Inicio</a></div>
+
 </body>
 </html>
