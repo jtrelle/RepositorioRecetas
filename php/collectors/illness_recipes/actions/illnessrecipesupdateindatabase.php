@@ -30,16 +30,8 @@ if (isset($_SESSION['MiSession'])) {
 
 if (isset($_SESSION['MiAdmin'])){
 
-
-  
-
-
-
-  #echo "<p> Hola Usuario: " . $_SESSION['MiSesion']. "    <a href='salir.php' class='btn btn-info' role='button'>Salir</a>";
- 
-
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
-  echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
+  echo "<li><a href='../collectors/users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
@@ -48,14 +40,16 @@ if (isset($_SESSION['MiAdmin'])){
 $recipesid = $_POST["recipesid"];
 $illnessid=$_POST["illnessid"];
 $id=$_POST["id"];
-echo "Edicion en proceso... </br>";
 
 include_once("../IllnessRecipesCollector.php");
 
 $IllnessRecipesCollectorObj = new IllnessRecipesCollector();
 $IllnessRecipesCollectorObj->updateIllnessRecipes($id, $illnessid, $recipesid);
-echo "Id: ". $id . " Actualizado a: " . $illnessid . ", " . $recipesid . "</br>";
+echo '<script language="javascript">';
+      echo 'alert("Actualizacion del id ' . $id . ' con el nombre '. $name .' en la base de datos");document.location.href="illnessrecipeslist.php"';
+      echo '</script>';
+
 ?>
-<div><a href="illnessrecipeslist.php" class="btn btn-info" role="button">Volver al Inicio</a></div>
+
 </body>
 </html>
