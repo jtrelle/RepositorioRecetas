@@ -9,7 +9,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Choice Aadministration</title>
+  <title>Choice Administration</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -22,7 +22,7 @@ session_start();
     <div class="navbar-header">
       <a class="navbar-brand" href="adminhome.php">Administracion</a>
 
-      <a class="navbar-brand" href="../../../RepositorioRecetas-production/index.php">Choice Home</a>
+      <a class="navbar-brand" href="../../index.php">Choice Home</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       
