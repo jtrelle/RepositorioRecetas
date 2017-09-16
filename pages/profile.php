@@ -314,7 +314,7 @@ if (isset($_SESSION['MiAdmin'])){
                                 </div>
                                     <div class="user-menu">
                                         <div>
-                                           <a href="../php/collectors/users/actions/editarPerfil.php">Editar perfil</a>
+                                           <a href="../../php/collectors/users/actions/editarPerfil.php">Editar perfil</a>
                                         </div>                                              
                                     </div>
 
