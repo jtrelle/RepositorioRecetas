@@ -1,4 +1,4 @@
-<?php
+r<?php
  session_start();
 
  	$name=$_POST['fname'];
@@ -14,8 +14,6 @@ $idP=$_GET["pid"];
 	include_once("../UserCollector.php");
 	$UserCollectorObj = new UserCollector();
 	$userAct = $UserCollectorObj->editUser($idU, $username, $pass);
-	$peopleAct = $UserCollectorObj->actualizarPeople($idP, $name, $surname, $email);
-	
 	
 
 
@@ -40,7 +38,7 @@ $idP=$_GET["pid"];
 		# code...
 		
 		echo '<script language="javascript">';
-			echo 'alert("Los datos de cuenta se han actualizado");document.location.href="usersCrud.php"';
+			echo 'alert("No se detectaron cambios en la seccion usuario");document.location.href="usersCrud.php"';
 			echo '</script>';
 	}
 

@@ -15,10 +15,7 @@ class UserCollector extends Collector
 
 								class Collector extends dataBase
 								{
-						  			public static $db;  -->llama a este $db */	  
-
-       
- 
+						  			public static $db;  -->llama a este $db */	 
     
     $arrayUsers= array();  //SE crea el arreglo donde se guardaran los objetos demo      
     foreach ($rows as $c){ //Hace foreach de cada row del fetch de la base
@@ -92,7 +89,10 @@ function showRolesUsers() {
       $u = $user[0]{'username'};
 
 
-      $aux = new RolesUser($c{'id'}, $r, $u); //Crea el nuevo objeto demo
+      $aux = new RolesUser(); //Crea el nuevo objeto demo
+      $aux.setId($c{'id'});
+      $aux.setFkRoles($r);
+      $aux.setFkUsers($u);
  
    
     
@@ -103,6 +103,22 @@ function showRolesUsers() {
 
 
 
+
+function fillCombo(){
+    $rows = self::$db->getRows("SELECT * FROM roles");
+
+     $arrayRolesUsers= array(); 
+
+    foreach ($rows as $c){ 
+      $aux = new Rol($c{'id'}, $c{'role'});
+  
+ 
+   
+    
+      array_push($arrayRolesUsers, $aux); 
+    }
+    return $arrayRolesUsers;
+}
 
 
 
@@ -221,22 +237,21 @@ function showRolesUsers() {
   function editUser($id, $username, $password){
 
      $usernameVal = self::$db->getRows("SELECT * FROM users WHERE username = '". $username . "'");
-      
- 
-     
-     
+    
 
-
-
+    $i = $usernameVal[0]{'id'};
+    $u = $usernameVal[0]{'username'};
+    $p = $usernameVal[0]{'password'};
 
       if (!empty($usernameVal)) { //Si ya existe el usuario
 
-          if (($usernameVal[0]{'id'} == $id) &&  ($usernameVal[0]{'username'} == $username)) {
+          if (($u == $id) &&  ($u == $username) && ($p == $password)) {
 
              $error = "same";
             return $error;
           }
-          elseif (($usernameVal[0]{'id'} == $id) &&  ($usernameVal[0]{'password'} != $password)) {
+
+          elseif (($p != $password) ||  ($u != $username)) {
 
             $insertrow = self::$db->updateRow("UPDATE public.users SET username = ?, password = ? WHERE id = ? ", array( "{$username}", "{$password}" ,$id));
              $error = "ok";
@@ -441,12 +456,6 @@ $error = "";
 
     }//end else
   }//End registrarse
-
-
-
-
-
-
 
 
 

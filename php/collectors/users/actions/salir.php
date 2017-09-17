@@ -11,6 +11,6 @@
   	if (isset($_SESSION['MiAdmin'])){
     	session_destroy();
     	//echo "<a href='../../../../index.php'>Volver</a>";
-    header("Location: ../../../../index.php");
+    header("Location: ../../../../../RepositorioRecetas-production/index.php");
   	}
 ?>

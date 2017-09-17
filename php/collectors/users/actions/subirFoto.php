@@ -53,7 +53,7 @@ include_once("../UserCollector.php");
     
                             $imgUploaded = $UserCollectorObj->uploadImg('../images/uploads/'.$file_name_new, $id);
                             echo '<script language="javascript">';
-                            echo 'alert("Foto de perfil actualizada");document.location.href="../../../collectors/users/actions/usersCrud.php"';
+                            echo 'alert("Foto de perfil actualizada");document.location.href="../../../admin/adminhome.php"';
                             echo '</script>';
                            
 

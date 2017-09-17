@@ -85,7 +85,7 @@ if (isset($_SESSION['MiSession'])) {
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" class="btn btn-default" value="Guardar">Crear</button>
-         
+        <a href="usersCrud.php">Cancelar</a>
       </div>
     </div>
   </form>
