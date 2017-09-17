@@ -20,6 +20,7 @@ session_start();
       <a class="navbar-brand" href="../../../../index.php">Choice Home</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
+    
 <?php
 
 if (isset($_SESSION['MiSession'])) {
@@ -30,7 +31,6 @@ if (isset($_SESSION['MiSession'])) {
 
 
 if (isset($_SESSION['MiAdmin'])){
-
 
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
   echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
@@ -51,11 +51,7 @@ include_once("../../../classes/Comments.php");
 $CommentsCollectorObj = new CommentsCollector();
 $ObjComments= new Comments($id,$email,$message,$users_id);
 
-
-
 ?>
-
-
 
 <div class="container">
   <h2>Crear el Objeto Demo</h2>
@@ -83,8 +79,6 @@ $ObjComments= new Comments($id,$email,$message,$users_id);
         <input type="text" class="form-control" name="users_id" value="<?php echo $ObjComments->setUserId($users_id); ?>" autofocus required/>
     </div>
     </div>
-
-
 
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
