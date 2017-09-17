@@ -30,7 +30,7 @@ if (isset($_SESSION['MiSession'])) {
 
 
 if (isset($_SESSION['MiAdmin'])){
-
+ 
 
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
   echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
@@ -42,16 +42,13 @@ if (isset($_SESSION['MiAdmin'])){
 
 $id=$_GET["id"];
 
-echo "Eliminacion en proceso... </br>";
-
 include_once("../CommentsCollector.php");
 
 $CommentsCollectorObj = new CommentsCollector();
 $CommentsCollectorObj->deleteComment($id);
-
-
-echo "Eliminado id: ". htmlspecialchars($id) . "</br>";
+echo '<script language="javascript">';
+      echo 'alert("Eliminacion del id ' . $id . ' en la base de datos");document.location.href="ListComments.php"';
+      echo '</script>';
 ?>
-<div><a href="ListComments.php">Volver al Inicio</a></div>
 </body>
 </html>
