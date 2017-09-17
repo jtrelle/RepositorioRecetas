@@ -42,7 +42,7 @@ if (isset($_SESSION['MiSession'])) {
  
 
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
- <li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li> 
+echo " <li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>"; 
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
