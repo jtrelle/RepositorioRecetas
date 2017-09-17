@@ -31,26 +31,23 @@ if (isset($_SESSION['MiSession'])) {
 
 if (isset($_SESSION['MiAdmin'])){
 
-
- 
-
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
-  echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
+  echo "<li><a href='../collectors/users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
 }
 $role=$_POST["role"];
 
-echo "Insercion de datos en proceso... </br>";
-
 include_once("../RolesCollector.php");
 
 $RolesCollectorObj = new RolesCollector();
 $RolesCollectorObj->createRole($role);
-
+echo '<script language="javascript">';
+echo 'alert("Creación de '. $role .' en la base de datos");document.location.href="ListRoles.php"';
+echo '</script>';
 
 ?>
-<div><a href="ListRoles.php">Volver al Inicio</a></div>
+
 </body>
 </html>
