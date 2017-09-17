@@ -62,6 +62,8 @@ include_once("../UserCollector.php");
 $id =1;
 
 $UserCollectorObj = new UserCollector();
+
+
   echo "<div class='container'>";
   echo "<div><a href='formNuevo.php' class='btn btn-info pull-right' role='button'>Crear nuevo Usuario</a></div>";
   echo "<table class='table'>";
@@ -80,14 +82,42 @@ $UserCollectorObj = new UserCollector();
   echo " </thead>";
   echo "<tbody>";
 
+  $list = new UserCollector();
+ 
+
+
+
+
 foreach ($UserCollectorObj->showUsers() as $c){
   echo "<tr>";
 
- echo "<td>" . $c->getIdUsers() . "</td><td>" . $c->getUserUsername() . "</td><td>" . $c->getUserPassword() . "</td><td><img class='img-responsive' style='width: 100px;' src='../../../" . $c->getUserImage() . "'/></td><td>".$c->getUserPeopleId()."(". $c->getUserNombre().")</td><td>". $c->getUserRol()."</td><td><a href='cambiarRol.php?id=" .$c->getIdUsers() ."' class='btn btn-info' role='button'>Cambiar Rol</a></td>
+ echo "<td>" . $c->getIdUsers() . "</td><td>" . $c->getUserUsername() . "</td><td>" . $c->getUserPassword() . "</td><td><img class='img-responsive' style='width: 100px;' src='../../../" . $c->getUserImage() . "'/></td><td>".$c->getUserPeopleId()."(". $c->getUserNombre().")</td><td>". $c->getUserRol() . "</td><td><a href='cambiarRol.php?id=" .$c->getIdUsers() ."' class='btn btn-info' role='button'>Cambiar Rol</a></td>
  <td>
  <a href='cambiarFoto.php?id=" .$c->getIdUsers() ."' class='btn btn-info' role='button'>
  Editar Foto</a></td>
  <td><a href='editarUser.php?id=" .$c->getIdUsers() ."&pid=" .$c->getUserPeopleId() ."' class='btn btn-info' role='button'>Editar</a></td><td><a href='eliminar.php?id=" .$c->getIdUsers() ."' class='btn btn-info' role='button'>Eliminar</a></td>";
+
+
+
+
+
+
+
+
+/*
+  echo "<td>" . $c->getIdUsers() . "</td><td>" . $c->getUserUsername() . "</td><td>" . $c->getUserPassword() . "</td><td><img class='img-responsive' style='width: 100px;' src='../../../" . $c->getUserImage() . "'/></td><td>".$c->getUserPeopleId()."(". $c->getUserNombre().")</td><td>". $c->getUserRol() . "</td><td><a href='cambiarRol.php?id=" .$c->getIdUsers() ."' class='btn btn-info' role='button'>Cambiar Rol</a></td>
+ <td>
+ <a href='cambiarFoto.php?id=" .$c->getIdUsers() ."' class='btn btn-info' role='button'>
+ Editar Foto</a></td>
+ <td><a href='editarUser.php?id=" .$c->getIdUsers() ."&pid=" .$c->getUserPeopleId() ."' class='btn btn-info' role='button'>Editar</a></td><td><a href='eliminar.php?id=" .$c->getIdUsers() ."' class='btn btn-info' role='button'>Eliminar</a></td>";*/
+
+
+
+
+
+
+
+
 
  /* echo "<td>" . $c->getIdUsers() . "</td><td>" . $c->getUserUsername() . "</td>" . "</td><td>" . $c->getUserPassword() . "</td>" . "</td><td>" . $c->getUser() . "</td>";*/
   /*echo "<td>      <a href='formdemoedit.php?id=".$c->getIdDemo()."' class='btn btn-info' role='button'>Editar</a>      ";
