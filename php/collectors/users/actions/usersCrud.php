@@ -85,16 +85,6 @@ $UserCollectorObj = new UserCollector();
   $list = new UserCollector();
  
 
-	
-	
-	
-	  echo "<tr>";
-
- echo "<td>ffff</td><td>ffffffffffffffff</td><td>ffff</td><td><img class='img-responsive' style='width: 100px;' src='../../../dd'/></td><td>ddd d</td><td>ddddd</td><td><a href='cambiarRol.php?id=5' class='btn btn-info' role='button'>Cambiar Rol</a></td>
- <td>
- <a href='cambiarFoto.php?id=dd' class='btn btn-info' role='button'>
- Editar Foto</a></td>
- <td><a href='editarUser.php?id=dd&pid=d' class='btn btn-info' role='button'>Editar</a></td><td><a href='eliminar.php?id=d' class='btn btn-info' role='button'>Eliminar</a></td>";
 
 	
 	
