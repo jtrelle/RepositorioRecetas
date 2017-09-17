@@ -22,10 +22,7 @@ session_start();
     </div>
     <ul class="nav navbar-nav navbar-right">
       
-
-
 <?php
-
 
 if (isset($_SESSION['MiSession'])) {
       echo '<script language="javascript">';
@@ -33,24 +30,17 @@ if (isset($_SESSION['MiSession'])) {
       echo '</script>';
     }
 
-
 if (isset($_SESSION['MiAdmin'])){
-
-
-    echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
+  
+  echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
   echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
 
-
-
-
 include_once("../CommentsCollector.php");
 
 $id =1;
-
-
 
 $CommentsCollectorObj = new CommentsCollector();
   echo "<div class='container'>";
@@ -79,15 +69,9 @@ echo "</table>";
 echo "</div>";
 echo "<div><a href='InsertComments.php' class='btn btn-info' role='button'>Agregar</a></div></div>";
 
-
 }
-  ?>
+?>
 
 </div>
 </body>
 </html>
-
- 
-
-
-
