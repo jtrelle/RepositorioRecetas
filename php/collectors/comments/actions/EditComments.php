@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,9 +29,7 @@ if (isset($_SESSION['MiSession'])) {
       echo '</script>';
     }
 
-
 if (isset($_SESSION['MiAdmin'])){
-
 
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
   echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
@@ -40,15 +39,13 @@ if (isset($_SESSION['MiAdmin'])){
 }
 //Obtener el valor del ID que viene del metodo GET a traves de http
 $id=$_GET["id"];
-echo "valor de id es". $id;
 
 include_once("../CommentsCollector.php");
 include_once('../../../dataBase/Collector.php');
 
-
 $CommentsCollectorObj = new CommentsCollector();
 $ObjComments = $CommentsCollectorObj->showComment($id);
-print_r($ObjComments);
+
 ?>
 
 
@@ -85,7 +82,6 @@ print_r($ObjComments);
     </div>
     </div>
 
-    
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" class="btn btn-default" value="Guardar">Submit</button>
