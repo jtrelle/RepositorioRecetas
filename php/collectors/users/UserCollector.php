@@ -8,7 +8,7 @@ include_once('../../../dataBase/Collector.php');
 class UserCollector extends Collector
 {
   
-  function showUsers() {
+ function showUsers() {
     $rows = self::$db->getRows("SELECT * FROM users"); //Recibe el fetch
 							/*Self llama la instancia del objeto para 
 							llegar al método getRows:
@@ -19,14 +19,25 @@ class UserCollector extends Collector
     
     $arrayUsers= array();  //SE crea el arreglo donde se guardaran los objetos demo      
     foreach ($rows as $c){ //Hace foreach de cada row del fetch de la base
-      $people = self::$db->getRows("SELECT name, surname FROM people WHERE id =".$c{'people_id'});
+
+      $peopleId = $c{'people_id'};
+      $userId = $c{'id'};
+
+      $people = self::$db->getRows("SELECT name, surname FROM people WHERE id =". $peopleId);
       $nombre = $people[0]{'name'}." ".$people[0]{'surname'};
 
 
-      $rol = self::$db->getRows("SELECT roles_id FROM roles_users WHERE users_id =". $c{'id'});
-      $r =   $rol[0]{'roles_id'};
+      $rol = self::$db->getRows("SELECT * FROM roles_users WHERE users_id =". $userId);
 
-      $rol_name =  self::$db->getRows("SELECT role FROM roles WHERE id =". $r); 
+
+      $rolId = $rol[0]{'roles_id'};
+
+
+      $rol_name =  self::$db->getRows("SELECT * FROM roles WHERE id =" . $rolId); 
+    
+    
+
+      $rolName = $rol_name[0]{'role'};
 
       $aux = new Users(); //Crea el nuevo objeto demo
       $aux->setIdUsers($c{'id'});
@@ -35,13 +46,14 @@ class UserCollector extends Collector
       $aux->setUserPeopleId($c{'people_id'});
       $aux->setUserImage($c{'image'});
       $aux->setUserNombre($nombre);
-      $aux->setUserRol($rol_name[0]{'role'});
+      $aux->setUserRol($rolName);
       
 
       array_push($arrayUsers, $aux); 
     }
     return $arrayUsers; //Se lo envía a la página para que muestre
   }
+
 
 
 
