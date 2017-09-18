@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,9 +20,7 @@ session_start();
       <a class="navbar-brand" href="../../../../index.php">Choice Home</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      
-
-
+    
 <?php
 
 if (isset($_SESSION['MiSession'])) {
@@ -33,22 +30,17 @@ if (isset($_SESSION['MiSession'])) {
     }
 
 
-
-
-
-  
-
-
-
-  #echo "<p> Hola Usuario: " . $_SESSION['MiSesion']. "    <a href='salir.php' class='btn btn-info' role='button'>Salir</a>";
- 
+if (isset($_SESSION['MiAdmin'])){
 
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
   echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
+}
 
+$id ="";
+//Obtener el valor del ID que viene del metodo GET a traves de http
 
 include_once("../IngredientCollector.php");
 include_once("../../../classes/Ingredients.php");
@@ -65,16 +57,10 @@ $ingrediente="";
 $IngredientCollectorObj = new IngredientCollector();
 $ObjIngredient = new Ingredients($id,$ingrediente,$portion,$recipes);
 ?>
-<div class="container">
-  <h2>Crear el Objeto Ingredients</h2>
-  <form class="form-horizontal" action="ingredientCreate.php" method="post">
 
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">id:</label>
-      <div class="col-sm-10">          
-        <input type="text" class="form-control" id="pwd" name="id" value="<?php echo $ObjIngredient->setIdIngredients($id); ?>" />
-      </div>
-      </div>
+<div class="container">
+  <h2>Crear el Objeto Ingrediente</h2>
+  <form class="form-horizontal" action="ingredientCreate.php" method="post">
 
     <div class="form-group">
       <label class="control-label col-sm-2" for="pwd">Ingrediente:</label>
@@ -119,8 +105,6 @@ $ObjIngredient = new Ingredients($id,$ingrediente,$portion,$recipes);
         </select>
 
 
-
-<!--           <input type="text" class="form-control" id="pwd" name="res" value="<?php echo $ObjIngredient->setIngredientRecipesId($recipes_id); ?>" />  --> 
       </div>
     </div>
 
@@ -159,8 +143,6 @@ $ObjIngredient = new Ingredients($id,$ingrediente,$portion,$recipes);
         </select>
 
 
-
-<!--          <input type="text" class="form-control" id="pwd" name="por" value="<?php echo $ObjIngredient->setIngredientPortionsId($portions_id); ?>" />  -->
       </div>
     </div>    
 
@@ -172,5 +154,6 @@ $ObjIngredient = new Ingredients($id,$ingrediente,$portion,$recipes);
     </div>
   </form>
 </div>
+
 </body>
 </html>
