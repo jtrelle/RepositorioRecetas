@@ -22,10 +22,6 @@ session_start();
       <a class="navbar-brand" href="../../../../index.php">Choice Home</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      
-
-
-
 
 <?php
 
@@ -38,24 +34,13 @@ if (isset($_SESSION['MiSession'])) {
 
 if (isset($_SESSION['MiAdmin'])){
 
-
-  
-
-
-
-  #echo "<p> Hola Usuario: " . $_SESSION['MiSesion']. "    <a href='salir.php' class='btn btn-info' role='button'>Salir</a>";
- 
-
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
   echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
 
-
 include_once("../RecipesUsersCollector.php");
-
-
 
 $RecipesUsersCollectorObj = new RecipesUsersCollector();
   echo "<div class='container'>";
@@ -83,15 +68,8 @@ echo "</table>";
 echo "</div>";
 echo "<div><a href='InsertRecipesUsers.php' class='btn btn-info' role='button'>Agregar</a></div></div>";
 
+}
 
-
-    }
-
- ?>
+?>
 </body>
 </html>
-
- 
-
-
-
