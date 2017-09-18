@@ -31,7 +31,6 @@ if (isset($_SESSION['MiSession'])) {
 
 if (isset($_SESSION['MiAdmin'])){
 
-
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
   echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
@@ -39,20 +38,18 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</nav>";
 }
 
-$id=$_POST["id"];
 $email=$_POST["email"];
 $message=$_POST["message"];
 $users_id=$_POST["users_id"];
 
-echo "Edicion en proceso... </br>";
 include_once("../CommentsCollector.php");
 
 $CommentsCollectorObj = new CommentsCollector();
-$CommentsCollectorObj->updateComment($id,$email,$message,$users_id);
-
-
+$CommentsCollectorObj->createComment($email,$message,$users_id);
+echo '<script language="javascript">';
+echo 'alert("Creación de la informacion en la base de datos");document.location.href="ListComments.php"';
+echo '</script>';
 
 ?>
-<div><a href="ListComments.php">Volver al Inicio</a></div>
 </body>
 </html>
