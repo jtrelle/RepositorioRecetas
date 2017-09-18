@@ -20,46 +20,33 @@ session_start();
       <a class="navbar-brand" href="../../../../index.php">Choice Home</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-<?php
-
+<?php 
 if (isset($_SESSION['MiSession'])) {
       echo '<script language="javascript">';
       echo 'alert("No tiene autorización para esta página.");document.location.href="../../../../index.php"';
       echo '</script>';
-    }
-
+}
 
 if (isset($_SESSION['MiAdmin'])){
-
-
-  
-
-
-
-  #echo "<p> Hola Usuario: " . $_SESSION['MiSesion']. "    <a href='salir.php' class='btn btn-info' role='button'>Salir</a>";
- 
-
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
   echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
 }
-
+      
 $id=$_POST["id"];
 $recipes_id=$_POST["recipes_id"];
 $users_id=$_POST["users_id"];
 
-echo "Edicion en proceso... </br>";
 include_once("../RecipesUsersCollector.php");
-
 
 $RecipesUsersCollectorObj = new RecipesUsersCollector();
 $RecipesUsersCollectorObj->updateRecipesUsers($id,$recipes_id,$users_id);
-
-
-
+echo '<script language="javascript">';
+echo 'alert("Actualizacion del id ' . $id . ' con el nombre '. $name .' en la base de datos");document.location.href="ListRecipesUsers.php"';
+echo '</script>';
 ?>
-<div><a href="ListRecipesUsers.php">Volver al Inicio</a></div>
+
 </body>
 </html>
