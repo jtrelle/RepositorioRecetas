@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +21,6 @@ session_start();
       <a class="navbar-brand" href="../../../../index.php">Choice Home</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-    
 <?php
 
 if (isset($_SESSION['MiSession'])) {
@@ -29,16 +29,7 @@ if (isset($_SESSION['MiSession'])) {
       echo '</script>';
     }
 
-
 if (isset($_SESSION['MiAdmin'])){
-
-
-  
-
-
-
-  #echo "<p> Hola Usuario: " . $_SESSION['MiSesion']. "    <a href='salir.php' class='btn btn-info' role='button'>Salir</a>";
- 
 
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
   echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
@@ -58,17 +49,12 @@ include_once("../../../classes/Recipes_users.php");
 $RecipesUsersCollectorObj = new RecipesUsersCollector();
 $ObjRecipesUsers= new RecipesUsers($id,$recipes_id,$users_id);
 
-
-
 ?>
 
-
-
 <div class="container">
-  <h2>Crear</h2>
+  <h2>New Recipes Users</h2>
   <form class="form-horizontal" action="formdemocreate.php" method="post">
     
-
    <div class="form-group">
       <label class="control-label col-sm-2" for="pwd">Recipes Id:</label>
       <div class="col-sm-10">          
@@ -76,16 +62,12 @@ $ObjRecipesUsers= new RecipesUsers($id,$recipes_id,$users_id);
     </div>
     </div>
 
-
-
     <div class="form-group">
       <label class="control-label col-sm-2" for="Usuario">Users id:</label>
       <div class="col-sm-10">
         <input type="text" class="form-control" name="users_id" value="<?php echo $ObjRecipesUsers->setUserId($users_id); ?>" autofocus required/>
     </div>
     </div>
-
-
 
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
