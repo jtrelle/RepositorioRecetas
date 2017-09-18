@@ -105,13 +105,11 @@ $UserCollectorObj = new UserCollector();
 foreach ($UserCollectorObj->showUsers() as $c){
   echo "<tr>";
 
- echo "<td>" . $c->getIdUsers() . "</td><td>" . $c->getUserUsername() . "</td><td>" . $c->getUserPassword() . "</td><td><img class='img-responsive' style='width: 100px;' src='../../../" . $c->getUserImage() . "'/></td><td>".$c->getUserPeopleId()."(". $c->getUserNombre().")</td><td>". $c->getUserRol() . "</td><td><a href='cambiarRol.php?id=" .$c->getIdUsers() ."' class='btn btn-info' role='button'>Cambiar Rol</a></td>
+ echo "<td>" . $c->getIdUsers() . "</td><td>" . $c->getUserUsername() . "</td><td>" . $c->getUserPassword() . "</td><td><img class='img-responsive' style='width: 100px;' src='../../../" . $c->getUserImage() . "'/></td><td>".$c->getUserPeopleId()."(". $c->getUserNombre().")</td><td>". $c->getUserRol() . "</td><td><a href='cambiarRol.php?id=" .$c->getIdUsers() ."&u=". $c->getUserUsername() ."&r=". $c->getUserRol() ."' class='btn btn-info' role='button'>Cambiar Rol</a></td>
  <td>
  <a href='cambiarFoto.php?id=" .$c->getIdUsers() ."' class='btn btn-info' role='button'>
  Editar Foto</a></td>
  <td><a href='editarUser.php?id=" .$c->getIdUsers() ."&pid=" .$c->getUserPeopleId() ."' class='btn btn-info' role='button'>Editar</a></td><td><a href='eliminar.php?id=" .$c->getIdUsers() ."' class='btn btn-info' role='button'>Eliminar</a></td>";
-
-
 
 
 
