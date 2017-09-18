@@ -10,7 +10,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>FORM</title>
+  <title>Choice Administration</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -23,7 +23,7 @@ session_start();
     <div class="navbar-header">
       <a class="navbar-brand" href="../../../admin/adminhome.php">Administracion</a>
 
-      <a class="navbar-brand" href="../../../RepositorioRecetas-production/index.php">Choice Home</a>
+      <a class="navbar-brand" href="../../../../index.php">Choice Home</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       
@@ -33,7 +33,7 @@ session_start();
 
 if (isset($_SESSION['MiSession'])) {
 			echo '<script language="javascript">';
-			echo 'alert("No tiene autorización para esta página.");document.location.href="../../index.php"';
+			echo 'alert("No tiene autorización para esta página.");document.location.href="../../../../index.php"';
 			echo '</script>';
 		}
 
@@ -42,7 +42,7 @@ if (isset($_SESSION['MiSession'])) {
  
 
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
-  echo "<li><a href='../collectors/users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
+  echo "<li><a href='salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
@@ -92,41 +92,8 @@ if (isset($_SESSION['MiSession'])) {
 	</div>
 	
 </div>
-
-
-
-
-
-    
+  
 
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
