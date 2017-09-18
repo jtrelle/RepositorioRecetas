@@ -152,7 +152,7 @@
                     <!-- Iniciar Sesion -->
                             <div class="comp pull-left">
                                  <?php
-                                echo "<a href='salir.php' class='hdr-btn link-reset demo-dialog-open-button login-item'>Salir</a> ";
+                                echo "<a href='../../../../php/collectors/users/actions/salir.php' class='hdr-btn link-reset demo-dialog-open-button login-item'>Salir</a> ";
                             ?>
                             </div>
 
