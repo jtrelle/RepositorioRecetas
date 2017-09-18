@@ -44,7 +44,7 @@ include_once("../RecipesUsersCollector.php");
 $RecipesUsersCollectorObj = new RecipesUsersCollector();
 $RecipesUsersCollectorObj->updateRecipesUsers($id,$recipes_id,$users_id);
 echo '<script language="javascript">';
-echo 'alert("Actualizacion del id ' . $id . ' con el nombre '. $name .' en la base de datos");document.location.href="ListRecipesUsers.php"';
+echo 'alert("Actualizacion del id ' . $id . ' en la base de datos");document.location.href="ListRecipesUsers.php"';
 echo '</script>';
 ?>
 
