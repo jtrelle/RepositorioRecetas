@@ -40,17 +40,14 @@ if (isset($_SESSION['MiAdmin'])){
 }
 //Obtener el valor del ID que viene del metodo GET a traves de http
 $id=$_GET["id"];
-echo "valor de id es". $id;
 
 include_once("../RecipesUsersCollector.php");
 include_once('../../../classes/Recipes_users.php');
-
 
 $RecipesUsersCollectorObj = new RecipesUsersCollector();
 $ObjRecipesUsers = $RecipesUsersCollectorObj->showRecipesUser($id);
 
 ?>
-
 
 <div class="container">
   <h2>EDITAR</h2>
@@ -76,7 +73,6 @@ $ObjRecipesUsers = $RecipesUsersCollectorObj->showRecipesUser($id);
         <input type="text" class="form-control" name="users_id" value="<?php echo $ObjRecipesUsers->getUserId(); ?>" autofocus required/>
     </div>
     </div>
-
     
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
