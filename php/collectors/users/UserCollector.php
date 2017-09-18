@@ -87,7 +87,6 @@ function showPersonas() {
 
 
 
-
 function showRolesUsers() {
     $rows = self::$db->getRows("SELECT * FROM roles_users"); //Recibe el fetch
    
@@ -101,10 +100,8 @@ function showRolesUsers() {
       $u = $user[0]{'username'};
 
 
-      $aux = new RolesUser(); //Crea el nuevo objeto demo
-      $aux.setId($c{'id'});
-      $aux.setFkRoles($r);
-      $aux.setFkUsers($u);
+      $aux = new RolesUser($c{'id'}, $r , $u); //Crea el nuevo objeto demo
+      
  
    
     
@@ -112,6 +109,8 @@ function showRolesUsers() {
     }
     return $arrayRolesUsers; //Se lo envía a la página para que muestre
   }
+
+
 
 
 
