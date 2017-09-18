@@ -1,15 +1,11 @@
 <?php
 session_start();
-
-
-
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>FORM</title>
+  <title>Choice Administration/title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -32,7 +28,7 @@ session_start();
 
 if (isset($_SESSION['MiSession'])) {
 			echo '<script language="javascript">';
-			echo 'alert("No tiene autorización para esta página.");document.location.href="../../index.php"';
+			echo 'alert("No tiene autorización para esta página.");document.location.href="../../../../index.php"';
 			echo '</script>';
 		}
 
