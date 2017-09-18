@@ -1,4 +1,4 @@
-r<?php
+<?php
  session_start();
 
  	$name=$_POST['fname'];
