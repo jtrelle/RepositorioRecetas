@@ -2,13 +2,14 @@
 
 include_once('../../../classes/Users.php');
 include_once('../../../classes/People.php');
+include_once('../../../classes/Roles.php');
 include_once('../../../classes/Roles_user.php');
 include_once('../../../dataBase/Collector.php');
 
 class UserCollector extends Collector
 {
   
- function showUsers() {
+  function showUsers() {
     $rows = self::$db->getRows("SELECT * FROM users"); //Recibe el fetch
 							/*Self llama la instancia del objeto para 
 							llegar al método getRows:
@@ -53,7 +54,6 @@ class UserCollector extends Collector
     }
     return $arrayUsers; //Se lo envía a la página para que muestre
   }
-
 
 
 
@@ -131,7 +131,6 @@ function showRoles(){
     }
     return $arrayRolesUsers;
 }
-
 
 
 
@@ -247,7 +246,7 @@ function showRoles(){
 
 
 
-   function editUser($id, $username, $password){
+  function editUser($id, $username, $password){
 
      $usernameVal = self::$db->getRows("SELECT * FROM users WHERE username = '". $username . "'");
     
@@ -311,8 +310,6 @@ function showRoles(){
 
 
 
-
-
 /*
 
 function uptadeUser($idU, $idP, $username, $password, $name, $surname, $email){
@@ -342,6 +339,7 @@ function uptadeUser($idU, $idP, $username, $password, $name, $surname, $email){
     if (!empty($_POST['user'])) {
       $row = self::$db->getRows("SELECT * FROM users as u WHERE u.username = '". $username . "' AND u.password = '" . $password . "' OR (SELECT email FROM people WHERE id = u.people_id) = '". $username . "' AND u.password = '" . $password . "'");
         
+        print_r($row);
       if (!empty($row)) {
          $idUser = '';
          $idPeople = '';
@@ -577,7 +575,6 @@ function uploadImg  ($img, $id){
 
 
 
-
 function cambiarRol($idUser, $idRol){
 
   
@@ -586,7 +583,6 @@ function cambiarRol($idUser, $idRol){
 
 
 }//End deleteUser
-
 
 
 
