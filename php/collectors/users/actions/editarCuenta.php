@@ -19,7 +19,7 @@
         <meta name="fragment" content="!" />
         <meta charset="utf-8" />
         <!--<base href="/">-->
-        <title>Pefil</title>
+        <title>Choice Administration</title>
         <!-- Stylesheets -->
         <link rel="stylesheet" href="../../../../css/styleLogin.css">
         <link rel="stylesheet" type="text/css" href="../../../../css/compiled/theme.css">
@@ -152,7 +152,7 @@
                     <!-- Iniciar Sesion -->
                             <div class="comp pull-left">
                                  <?php
-                                echo "<a href='../../../../php/collectors/users/actions/salir.php' class='hdr-btn link-reset demo-dialog-open-button login-item'>Salir</a> ";
+                                echo "<a href='salir.php' class='hdr-btn link-reset demo-dialog-open-button login-item'>Salir</a> ";
                             ?>
                             </div>
 
