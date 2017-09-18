@@ -116,13 +116,13 @@ function showRolesUsers() {
 
 
 
-function fillCombo(){
+function showRoles(){
     $rows = self::$db->getRows("SELECT * FROM roles");
 
      $arrayRolesUsers= array(); 
 
     foreach ($rows as $c){ 
-      $aux = new Rol($c{'id'}, $c{'role'});
+      $aux = new Roles($c{'id'}, $c{'role'});
   
  
    
@@ -131,6 +131,7 @@ function fillCombo(){
     }
     return $arrayRolesUsers;
 }
+
 
 
 
