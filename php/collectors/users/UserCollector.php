@@ -245,17 +245,17 @@ function showRoles(){
 
 
 
-  function editUser($id, $username, $password){
+     function editUser($id, $username, $password){
 
      $usernameVal = self::$db->getRows("SELECT * FROM users WHERE username = '". $username . "'");
-    
-    
 
-    $i = $usernameVal[0]{'id'};
-    $u = $usernameVal[0]{'username'};
-    $p = $usernameVal[0]{'password'};
+
+    
 
       if (!empty($usernameVal)) { //Si ya existe el usuario
+        $i = $usernameVal[0]{'id'};
+    $u = $usernameVal[0]{'username'};
+    $p = $usernameVal[0]{'password'};
 
           if (($i ==  $id) AND (strcasecmp($u, $username) == 0) AND (strcasecmp($p, $password) == 0)) {
 
@@ -287,6 +287,74 @@ function showRoles(){
 
    
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function editPeople($id, $name, $surname, $email){
+
+     $usernameVal = self::$db->getRows("SELECT * FROM people WHERE email = '". $email . "'");
+    
+  
+
+
+   
+
+      if (!empty($usernameVal)) { //Si ya existe el usuario
+         $i = $usernameVal[0]{'id'};
+    $n = $usernameVal[0]{'name'};
+    $s = $usernameVal[0]{'surname'};
+    $e = $usernameVal[0]{'email'};
+
+          if (($i ==  $id) AND (strcasecmp($n, $name) == 0) AND (strcasecmp($s, $surname) == 0) AND (strcasecmp($e, $email) == 0)) {
+
+             $error = "same";
+            return $error;
+          }
+          elseif (($i ==  $id) AND (($n !== $name) OR ($s !== $surname))) {
+
+            $insertrow = self::$db->updateRow("UPDATE public.people SET name = ?, surname = ? WHERE id = ? ", array( "{$name}", "{$surname}" ,$id));
+             $error = "ok";
+              return $error;
+          }
+          else{
+             $error = "email";
+              return $error;
+          }
+
+
+       
+      }
+      else{
+       $insertrow = self::$db->updateRow("UPDATE public.people SET name = ?, surname = ?, email = ? WHERE id = ? ", array( "{$name}", "{$surname}", "{$email}" ,$id));
+       $error = "ok";
+        return $error;
+      
+
+     }
+
+
+   
+  }
+
+
 
 
 
