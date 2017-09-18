@@ -576,22 +576,16 @@ function uploadImg  ($img, $id){
 
 
 
-function cambiarRol($id){
 
-   $row = self::$db->getRows("SELECT * FROM roles_users WHERE users_id = ?", array($id));
+function cambiarRol($idUser, $idRol){
 
-   $rolId = $row[0]{'roles_id'}; 
-   $r =  $row[0]{'id'};
-
-   if ($rolId === 1) {
-      $insertrow = self::$db->updateRow("UPDATE public.roles_users SET roles_id = 2 WHERE id = ? ", array($r));
-   }
-   else{
-    $insertrow = self::$db->updateRow("UPDATE public.roles_users SET roles_id = 1 WHERE id = ? ", array($r));
-   }
+  
+      $insertrow = self::$db->updateRow("UPDATE public.roles_users SET roles_id =". $idRol. "  WHERE users_id = ? ", array($idUser));
+   
 
 
 }//End deleteUser
+
 
 
 
