@@ -246,9 +246,10 @@ function fillCombo(){
 
 
 
-  function editUser($id, $username, $password){
+   function editUser($id, $username, $password){
 
      $usernameVal = self::$db->getRows("SELECT * FROM users WHERE username = '". $username . "'");
+    
     
 
     $i = $usernameVal[0]{'id'};
@@ -257,13 +258,12 @@ function fillCombo(){
 
       if (!empty($usernameVal)) { //Si ya existe el usuario
 
-          if (($u == $id) &&  ($u == $username) && ($p == $password)) {
+          if (($i ==  $id) AND (strcasecmp($u, $username) == 0) AND (strcasecmp($p, $password) == 0)) {
 
              $error = "same";
             return $error;
           }
-
-          elseif (($p != $password) ||  ($u != $username)) {
+          elseif (($i ==  $id) AND ($p !== $password)) {
 
             $insertrow = self::$db->updateRow("UPDATE public.users SET username = ?, password = ? WHERE id = ? ", array( "{$username}", "{$password}" ,$id));
              $error = "ok";
@@ -288,6 +288,8 @@ function fillCombo(){
 
    
   }
+
+
 
 
 
