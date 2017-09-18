@@ -22,8 +22,8 @@ class IngredientCollector extends Collector
   $recipes = self::$db->getRows("SELECT name FROM recipes WHERE id =".$c{'recipes_id'});
         $recipesname = $recipes[0]{'name'};
 
-  $user = self::$db->getRows("SELECT username FROM users WHERE id =".$c{'users_id'});
-        $username = $user[0]{'username'};
+  #$user = self::$db->getRows("SELECT username FROM users WHERE id =".$c{'users_id'});
+        #$username = $user[0]{'username'};
 
 
       
