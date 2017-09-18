@@ -602,9 +602,8 @@ function cambiarRol($idUser, $idRol){
 
 function deleteUser($id){
 
-$row = self::$db->getRows("SELECT * FROM users WHERE id = ?", array($id));
-
-
+$deleterow = self::$db->deleteRow("DELETE FROM public.comments WHERE users_id= ?", array("{$id}"));
+$deleterow = self::$db->deleteRow("DELETE FROM public.recipes_users WHERE users_id= ?", array("{$id}"));
 $deleterow = self::$db->deleteRow("DELETE FROM public.roles_users WHERE users_id= ?", array("{$id}"));
 $deleterow = self::$db->deleteRow("DELETE FROM public.users WHERE id= ?", array("{$id}"));
 $deleterow = self::$db->deleteRow("DELETE FROM public.people WHERE id= ?", array($row[0]{'people_id'}));
