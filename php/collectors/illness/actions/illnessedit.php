@@ -82,6 +82,6 @@ echo    "<div class='form-group'>
   </form>
 
 </div>";
-<?php } ?>
+} ?>
 </body>
 </html>
