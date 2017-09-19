@@ -75,6 +75,8 @@ echo "<div><a href='InsertRecipesUsers.php' class='btn btn-info' role='button'>A
 ?>
 </body>
 </html>
-  <?php } ?>
-  
+ <?php } else 
+{
+  echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../../index.php'>";     
+}?> 
   
