@@ -57,31 +57,31 @@ include_once("../../../classes/Illness.php");
 $IllnessCollectorObj = new IllnessCollector();
 $ObjIllness = $IllnessCollectorObj->showIllness($id);
 #print_r($ObjIllness);
-?>
-<div class="container">
-  <h2>Edit Illness</h2>
-  <form class="form-horizontal" action="illnessupdateindatabase.php" method="post">
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="Usuario">Id:</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" name="id" value="<?php echo $ObjIllness->getId(); ?>" readonly/>
+
+echo "<div class='container'>";
+echo  "<h2>Edit Illness</h2>";
+echo  "<form class='form-horizontal' action='illnessupdateindatabase.php' method='post'>";
+echo    "<div class='form-group'>";
+echo      "<label class='control-label col-sm-2' for='Usuario'>Id:</label>";
+echo      "<div class='col-sm-10'>";
+echo        "<input type='text' class='form-control' name='id' value='<?php echo $ObjIllness->getId(); ?>' readonly/>";
+echo"      </div>
+    </div>";
+echo    "<div class='form-group'>
+      <label class='control-label col-sm-2' for='pwd'>Name:</label>
+      <div class='col-sm-10'>          
+        <input type='text' class='form-control'ch name='name' value='<?php echo $ObjIllness->getName(); ?>' autofocus required/>
       </div>
     </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Name:</label>
-      <div class="col-sm-10">          
-        <input type="text" class="form-control" name="name" value="<?php echo $ObjIllness->getName(); ?>" autofocus required/>
-      </div>
-    </div>
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default" value="Guardar">Submit</button>
-        <a href="illnesslist.php" >Cancelar</a>
+    <div class='form-group'>        
+      <div class='col-sm-offset-2 col-sm-10'>
+        <button type='submit' class='btn btn-default' value='Guardar'>Submit</button>
+        <a href='illnesslist.php' >Cancelar</a>
       </div>
     </div>
   </form>
 
-</div>
+</div>";
 <?php } ?>
 </body>
 </html>
