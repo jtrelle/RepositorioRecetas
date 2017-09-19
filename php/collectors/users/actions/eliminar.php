@@ -18,6 +18,9 @@ $UserCollectorObj->deleteUser($id);
 echo '<script language="javascript">';
 			echo 'alert("El usuario se ha eliminado.");document.location.href="usersCrud.php"';
 			echo '</script>';
+}else 
+{
+  echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../../index.php'>";     
 }
 ?>
 
