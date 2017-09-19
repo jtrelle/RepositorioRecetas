@@ -37,7 +37,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</div>";
   echo "</nav>";
 
-}
+
 $id=$_GET["id"];
 
 include_once("../RolesCollector.php");
