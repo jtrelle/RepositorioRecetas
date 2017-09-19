@@ -8,7 +8,7 @@ if (isset($_SESSION['MiSession'])) {
 
 
 if (isset($_SESSION['MiAdmin'])){
-
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +32,7 @@ if (isset($_SESSION['MiAdmin'])){
 
 
 
-
+<?php
 
   
 
@@ -58,7 +58,7 @@ include_once("../../../classes/Illness.php");
 $IllnessCollectorObj = new IllnessCollector();
 $ObjIllness = $IllnessCollectorObj->showIllness($id);
 #print_r($ObjIllness);
-
+?>
 <div class="container">
   <h2>Edit Illness</h2>
   <form class="form-horizontal" action="illnessupdateindatabase.php" method="post">
@@ -85,4 +85,4 @@ $ObjIllness = $IllnessCollectorObj->showIllness($id);
 
 </body>
 </html>
-            }?>
+           <?php }?>
