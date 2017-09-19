@@ -50,7 +50,7 @@ $CommentsCollectorObj = new CommentsCollector();
   echo "   <th>Id</th>";
   echo "   <th>email</th>"; 
   echo "   <th>Mensaje</th>"; 
-   echo "   <th>Users</th>"; 
+   echo "   <th>Users Id</th>"; 
   echo "   </tr>";
   echo " </thead>";
   echo "<tbody>";
