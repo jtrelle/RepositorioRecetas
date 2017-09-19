@@ -36,7 +36,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-} 
+ 
 
 $recipes_id=$_POST["recipes"];
 $portions_id=$_POST["portion"];
@@ -51,7 +51,7 @@ echo '<script language="javascript">';
 echo 'alert("Creación de '. $ingredient .' en la base de datos");document.location.href="ingredientesVista.php"';
 echo '</script>';
 
-?>
+}?>
 </div>
 </body>
 </html>
