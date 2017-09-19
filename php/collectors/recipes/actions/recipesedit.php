@@ -32,9 +32,6 @@ if (isset($_SESSION['MiSession'])) {
 
 if (isset($_SESSION['MiAdmin'])){
 
-  #echo "<p> Hola Usuario: " . $_SESSION['MiSesion']. "    <a href='salir.php' class='btn btn-info' role='button'>Salir</a>";
- 
-
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
   echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
@@ -53,6 +50,10 @@ include_once("../../../classes/Recipes.php");
 $RecipesCollectorObj = new RecipesCollector();
 $ObjRecipes = $RecipesCollectorObj->showRecipes($id);
 #print_r($ObjIllness);
+include_once("../../lists/ListCollector.php");
+
+$lis= new ListCollector();
+$List=$lis->showLists();
 ?>
 
 <div class="container">
@@ -89,9 +90,38 @@ $ObjRecipes = $RecipesCollectorObj->showRecipes($id);
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2">Lists_Id:</label>
-      <div class="col-sm-10">     
-        <input type="number" min="1" max="10" class="form-control" for="pwd" name="listid" value="<?php echo $ObjRecipes->getListsId(); ?>"/> 
+      <label class="control-label col-sm-2">Lists:</label>
+      <div class="col-sm-10">   
+        <select name="listid">
+        <?php
+          $cont=0;
+          $id=0;
+          $combobit="";
+         foreach ($List as $datos){ //Hace foreach de cada row del fetch de la base
+          $cont=0;
+          $id=0;
+            foreach ($datos as $datosx){ //Hace foreach de cada row del fetch de la base
+              echo $id;
+              if($cont==1)
+              {
+                $cont=2;
+                if($ObjRecipes->getListsId()==$id)
+                  $combobit .="<option value='".$id."' selected>".$datosx."</option>";
+                else
+                  $combobit .="<option value='".$id."'>".$datosx."</option>";
+              }
+              else
+              {
+                $cont=$cont+1;
+                if($cont==1)
+                $id=$datosx;
+              }
+            }
+          }
+          echo $combobit;
+            
+        ?>
+        </select>
       </div>
     </div>
     <div class="form-group">        
