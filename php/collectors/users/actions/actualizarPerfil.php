@@ -1,6 +1,16 @@
 <?php
  session_start();
 
+
+<?php
+if (isset($_SESSION['MiSession'])) {
+			echo '<script language="javascript">';
+			echo 'alert("No tiene autorización para esta página.");document.location.href="../../../../index.php"';
+			echo '</script>';
+		}
+if (isset($_SESSION['MiAdmin'])){
+
+
 	 $name=$_POST['pName'];
 	  $surname=$_POST['pSurname'];
 	  $email=$_POST['pEmail'];
@@ -15,4 +25,8 @@
 			echo '<script language="javascript">';
 			echo 'alert("Perfil actualizado");document.location.href="../../../../pages/profile.php"';
 			echo '</script>';
+	
+	
+	
+}
 ?>
