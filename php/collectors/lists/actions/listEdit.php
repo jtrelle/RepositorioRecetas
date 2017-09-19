@@ -71,7 +71,7 @@ $ObjList = $ListCollectorObj->showList($id);
     </div>
   </form>
 </div>
-        ?>
+        
 </body>
 </html>
   <?php } ?>
