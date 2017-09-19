@@ -8,7 +8,6 @@ if (isset($_SESSION['MiSession'])) {
 
 
 if (isset($_SESSION['MiAdmin'])){
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
