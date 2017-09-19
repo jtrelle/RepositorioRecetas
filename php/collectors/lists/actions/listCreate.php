@@ -36,7 +36,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-
+}
 
 $name=$_POST["name"];
 
@@ -48,6 +48,6 @@ echo '<script language="javascript">';
 echo 'alert("Creación de '. $name .' en la base de datos");document.location.href="listVista.php"';
 echo '</script>';
 
-}?>
+?>
 </body>
 </html>
