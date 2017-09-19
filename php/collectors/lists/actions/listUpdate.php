@@ -35,7 +35,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 
 $name=$_POST["name"];
 $id=$_POST["id"];
@@ -46,7 +46,7 @@ $ListCollector->updateList($id, $name);
 echo '<script language="javascript">';
 echo 'alert("Actualizacion del id ' . $id . ' con el nombre '. $name .' en la base de datos");document.location.href="listVista.php"';
 echo '</script>';
-?>
+}?>
 
 </body>
 </html>
