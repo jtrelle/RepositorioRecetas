@@ -36,7 +36,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 //Obtener el valor del ID que viene del metodo GET a traves de http
 $id=$_GET["id"];
 
@@ -90,5 +90,6 @@ $ObjComments = $CommentsCollectorObj->showComment($id);
     </div>
   </form>
 </div>
+      }
 </body>
 </html>
