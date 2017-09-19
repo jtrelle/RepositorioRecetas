@@ -50,7 +50,7 @@ echo '<script language="javascript">';
 echo 'alert("Actualizacion del id ' . $id . ' con el nombre en la base de datos");document.location.href="ListComments.php"';
 echo '</script>';
 
-?>
-      }
+}?>
+      
 </body>
 </html>
