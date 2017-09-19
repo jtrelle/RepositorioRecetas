@@ -36,7 +36,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 $role=$_POST["role"];
 
 include_once("../RolesCollector.php");
@@ -47,7 +47,7 @@ echo '<script language="javascript">';
 echo 'alert("Creación de '. $role .' en la base de datos");document.location.href="ListRoles.php"';
 echo '</script>';
 
-?>
+}?>
 
 </body>
 </html>
