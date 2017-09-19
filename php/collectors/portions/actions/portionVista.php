@@ -72,4 +72,7 @@ echo "<div><a href='portionInsert.php' class='btn btn-info' role='button'>New Po
 </body>
 </html>
   
-  <?php } ?>
+  <?php } else 
+{
+  echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../../index.php'>";     
+}?>
