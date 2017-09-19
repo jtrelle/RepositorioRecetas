@@ -40,7 +40,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</div>";
   echo "</nav>";
 
-
+}
 $id=$_POST["id"];
 $role=$_POST["role"];
 
