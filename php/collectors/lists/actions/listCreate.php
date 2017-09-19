@@ -48,6 +48,6 @@ echo '<script language="javascript">';
 echo 'alert("Creación de '. $name .' en la base de datos");document.location.href="listVista.php"';
 echo '</script>';
 
-?>}
+}?>
 </body>
 </html>
