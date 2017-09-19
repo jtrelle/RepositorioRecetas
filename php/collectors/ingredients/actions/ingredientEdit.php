@@ -56,7 +56,7 @@ $IngredientCollectorObj = new IngredientCollector();
 $ObjIngredient = $IngredientCollectorObj->showIngredient($id);
 //print_r($ObjIngredient);
 //print_r($portionList);
-}?>
+?>
 <div class="container">
   <h2>Editar el Ingrediente</h2>
   <form class="form-horizontal" action="ingredientUpdate.php" method="post">
