@@ -64,13 +64,13 @@ echo  "<form class='form-horizontal' action='illnessupdateindatabase.php' method
 echo    "<div class='form-group'>";
 echo      "<label class='control-label col-sm-2' for='Usuario'>Id:</label>";
 echo      "<div class='col-sm-10'>";
-echo        "<input type='text' class='form-control' name='id' value='<?php echo $ObjIllness->getId(); ?>' readonly/>";
+echo        "<input type='text' class='form-control' name='id' value='".<?php echo $ObjIllness->getId(); ?>."' readonly/>";
 echo"      </div>
     </div>";
 echo    "<div class='form-group'>
       <label class='control-label col-sm-2' for='pwd'>Name:</label>
       <div class='col-sm-10'>          
-        <input type='text' class='form-control'ch name='name' value='<?php echo $ObjIllness->getName(); ?>' autofocus required/>
+        <input type='text' class='form-control'ch name='name' value='".<?php echo $ObjIllness->getName(); ?>."' autofocus required/>
       </div>
     </div>
     <div class='form-group'>        
