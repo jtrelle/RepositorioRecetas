@@ -73,7 +73,7 @@ $ObjPortion = $PortionCollectorObj->showPortion($id);
     </div>
   </form>
 </div>
-        }?>
+        ?>
 </body>
 </html>
 <?pho } ?>
