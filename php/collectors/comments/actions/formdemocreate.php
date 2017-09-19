@@ -51,5 +51,7 @@ echo 'alert("Creación de la informacion en la base de datos");document.location
 echo '</script>';
 
 ?>
+          }
+
 </body>
 </html>
