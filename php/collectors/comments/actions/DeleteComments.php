@@ -48,8 +48,8 @@ $CommentsCollectorObj->deleteComment($id);
 echo '<script language="javascript">';
       echo 'alert("Eliminacion del id ' . $id . ' en la base de datos");document.location.href="ListComments.php"';
       echo '</script>';
-?>
-      }
+ }?>
+     
 
 </body>
 </html>
