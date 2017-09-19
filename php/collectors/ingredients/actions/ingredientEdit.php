@@ -37,7 +37,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 //Obtener el valor del ID que viene del metodo GET a traves de http
 $id=$_GET["id"];
 include_once("../IngredientCollector.php");
@@ -55,7 +55,7 @@ $IngredientCollectorObj = new IngredientCollector();
 $ObjIngredient = $IngredientCollectorObj->showIngredient($id);
 //print_r($ObjIngredient);
 //print_r($portionList);
-?>
+}?>
 <div class="container">
   <h2>Editar el Ingrediente</h2>
   <form class="form-horizontal" action="ingredientUpdate.php" method="post">
