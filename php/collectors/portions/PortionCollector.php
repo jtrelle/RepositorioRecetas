@@ -40,6 +40,9 @@ class PortionCollector extends Collector
   }
 
   function deletePortion($id){
+    
+    $deleteportionrow = self::$db->deleteRow("DELETE FROM public.ingredients WHERE portions_id= ?", array("{$id}"));
+
     $deleterow = self::$db->deleteRow("DELETE FROM public.portions WHERE id= ?", array("{$id}"));
   }
 
