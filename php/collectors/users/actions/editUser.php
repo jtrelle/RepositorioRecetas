@@ -14,10 +14,63 @@ $idP=$_GET["pid"];
 	include_once("../UserCollector.php");
 	$UserCollectorObj = new UserCollector();
 	$userAct = $UserCollectorObj->editUser($idU, $username, $pass);
+	$peopleAct  = $UserCollectorObj->editPeople($idP, $name, $surname, $email);
 	
 
 
-	if ($userAct === "user") {
+	if ($userAct === "user" AND $peopleAct === "people") {
+		# code...
+		
+		echo '<script language="javascript">';
+			echo 'alert("El nombre de usuario y correo ya existen. Intente otro");document.location.href="editarUser.php?id=' .$idU .'&pid=' .$idP .'"' ;
+			echo '</script>';
+			
+	}
+
+
+	if ($userAct === "user" OR $peopleAct === "email") {
+		# code...
+		if ($userAct === "user") {
+			echo '<script language="javascript">';
+			echo 'alert("El nombre de usuario ya existe. Intente otro");document.location.href="editarUser.php?id=' .$idU .'&pid=' .$idP .'"' ;
+			echo '</script>';
+		} 
+
+		else 
+		{
+			echo '<script language="javascript">';
+			echo 'alert("El correo ya existe. Intente otro");document.location.href="editarUser.php?id=' .$idU .'&pid=' .$idP .'"' ;
+			echo '</script>';
+		}
+		
+		
+			
+	}
+
+
+	if ($userAct === "ok" OR $peopleAct === "ok") {
+		# code...
+
+		echo '<script language="javascript">';
+			echo 'alert("Los datos de cuenta se han actualizado");document.location.href="usersCrud.php"';
+			echo '</script>';
+	}
+
+		if ($userAct === "same" AND $peopleAct === "same") {
+		# code...
+		
+		echo '<script language="javascript">';
+			echo 'alert("No se detectaron cambios.");document.location.href="usersCrud.php"';
+			echo '</script>';
+	}
+
+
+
+
+
+
+
+	/*if () {
 		# code...
 		
 		echo '<script language="javascript">';
@@ -26,7 +79,7 @@ $idP=$_GET["pid"];
 			
 	}
 
-	if ($userAct === "ok") {
+	if () {
 		# code...
 
 		echo '<script language="javascript">';
@@ -34,15 +87,14 @@ $idP=$_GET["pid"];
 			echo '</script>';
 	}
 
-		if ($userAct === "same") {
+		if () {
 		# code...
 		
 		echo '<script language="javascript">';
-			echo 'alert("No se detectaron cambios en la seccion usuario");document.location.href="usersCrud.php"';
+			echo 'alert("No se detectaron cambios en la seccion persona");document.location.href="usersCrud.php"';
 			echo '</script>';
 	}
-
-
+*/
 
 			
 ?>
