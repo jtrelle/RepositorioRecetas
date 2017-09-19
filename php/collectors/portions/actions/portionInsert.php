@@ -47,7 +47,7 @@ include_once("../PortionCollector.php");
 include_once("../../../classes/Portions.php");
 $PortionCollectorObj = new PortionCollector();
 $ObjPortion = new Portions($id,$portion);
-
+?>
 <div class="container">
   <h2>Crear el Objeto Ingredients</h2>
   <form class="form-horizontal" action="portionCreate.php" method="post">
@@ -67,7 +67,7 @@ $ObjPortion = new Portions($id,$portion);
     </div>
   </form>
 </div>
-        ?>
+        
 </body>
 </html>
   
