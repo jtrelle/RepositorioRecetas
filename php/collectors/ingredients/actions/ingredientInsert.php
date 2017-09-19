@@ -87,7 +87,7 @@ $ObjIngredient = new Ingredients($id,$ingrediente,$portion,$recipes);
               echo $id;
               if($cont==5)
               {
-                if($ObjIngredient->setIngredientPortionsId($portion)==$id)
+                if($ObjIngredient->setIngredientPortionsId($portion)==$id){
                   $combobit .="<option value='".$id."' selected>".$datosx."</option>";
                 else{
                      
@@ -127,9 +127,10 @@ $ObjIngredient = new Ingredients($id,$ingrediente,$portion,$recipes);
               echo $id;
               if($cont==1)
               {
-                if($ObjIngredient->setIngredientPortionsId($portions_id)==$id)
+                if($ObjIngredient->setIngredientPortionsId($portions_id)==$id){
                 $combobit .="<option value='".$id."' selected>".$datosx."</option>";
-              else
+                   }   
+              else{
                 $combobit .="<option value='".$id."'>".$datosx."</option>";
               }
               else
