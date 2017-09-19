@@ -51,7 +51,11 @@ $IllnessRecipesCollectorObj->deleteIllnessRecipes($id);
 echo '<script language="javascript">';
 echo 'alert("Eliminacion del id ' . $id . ' en la base de datos");document.location.href="illnessrecipeslist.php"';
 echo '</script>';
-} ?>
+?>
 
 </body>
 </html>
+      <?php } else 
+{
+  echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../../index.php'>";     
+}?> 
