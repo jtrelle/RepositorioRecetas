@@ -91,7 +91,7 @@ $ObjIngredient = $IngredientCollectorObj->showIngredient($id);
               {
                 if($ObjIngredient->getIngredientRecipesId()==$id)
                   $combobit .="<option value='".$id."' selected>".$datosx."</option>";
-                else
+                else{
                   $combobit .="<option value='".$id."'>".$datosx."</option>";
               }
               else
