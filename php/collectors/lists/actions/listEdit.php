@@ -45,6 +45,8 @@ include_once("../ListCollector.php");
 include_once("../../../classes/Lists.php");
 $ListCollectorObj = new ListCollector();
 $ObjList = $ListCollectorObj->showList($id);
+      ?>
+
 
 <div class="container">
   <h2>Editar el Ingrediente</h2>
