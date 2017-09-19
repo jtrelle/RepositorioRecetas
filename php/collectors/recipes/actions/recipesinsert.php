@@ -32,16 +32,12 @@ if (isset($_SESSION['MiSession'])) {
 
 if (isset($_SESSION['MiAdmin'])){
 
-  #echo "<p> Hola Usuario: " . $_SESSION['MiSesion']. "    <a href='salir.php' class='btn btn-info' role='button'>Salir</a>";
- 
-
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
   echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
 }
-
 
 $name = "";
 $description = "";
@@ -50,12 +46,16 @@ $preparation = "";
 $image="";
 $id="";
 
-#echo "valor de id es". $id;
 include_once("../RecipesCollector.php");
 include_once("../../../classes/Recipes.php");
 
 $RecipesCollectorObj = new RecipesCollector();
 $ObjRecipes = new Recipes($id, $image, $preparation, $listid, $description, $name);
+
+include_once("../../lists/ListCollector.php");
+
+$lis= new ListCollector();
+$List=$lis->showLists();
 ?>
 
 <div class="container">
@@ -86,15 +86,40 @@ $ObjRecipes = new Recipes($id, $image, $preparation, $listid, $description, $nam
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2">Lists_Id:</label>
-      <div class="col-sm-10">          
-        <input type="text" class="form-control" for="pwd" name="listid" value="<?php echo $ObjRecipes->setListsId($listid); ?>"/>
+      <label class="control-label col-sm-2">Lists:</label>
+      <div class="col-sm-10">
+        <select name="listid">
+        <?php
+          $cont=0;
+          $id=0;
+          $combobit="";
+         foreach ($List as $datos){ //Hace foreach de cada row del fetch de la base
+          $cont=0;
+          $id=0;
+            foreach ($datos as $datosx){ //Hace foreach de cada row del fetch de la base
+              if($cont==1)
+              {
+                $cont=2;
+                  $combobit .="<option value='".$id."'>".$datosx."</option>";
+              }
+              else
+              {
+                $cont=$cont+1;
+                if($cont==1)
+                $id=$datosx;
+              }
+            }
+          }
+          echo $combobit;
+            
+        ?>
+        </select>
       </div>
     </div>
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" class="btn btn-default" value="Guardar">Submit</button>
-        <a href="illnessrecipeslist.php" >Cancelar</a>
+        <a href="recipeslist.php" >Cancelar</a>
       </div>
     </div>
   </form>
