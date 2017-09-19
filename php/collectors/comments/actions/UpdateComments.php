@@ -34,7 +34,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 
 $id=$_POST["id"];
 $email=$_POST["email"];
@@ -51,5 +51,6 @@ echo 'alert("Actualizacion del id ' . $id . ' con el nombre en la base de datos"
 echo '</script>';
 
 ?>
+      }
 </body>
 </html>
