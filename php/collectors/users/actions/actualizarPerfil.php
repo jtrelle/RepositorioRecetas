@@ -2,7 +2,7 @@
  session_start();
 
 
-<?php
+
 if (isset($_SESSION['MiSession'])) {
 			echo '<script language="javascript">';
 			echo 'alert("No tiene autorización para esta página.");document.location.href="../../../../index.php"';
