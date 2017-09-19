@@ -2,8 +2,8 @@
 
 class Lists
 {
-    private $id;
-    private $name;
+    public $id;
+    public $name;
     
      function __construct($id, $name) {
         $this->id = $id;
