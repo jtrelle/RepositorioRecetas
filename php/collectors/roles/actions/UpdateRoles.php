@@ -39,7 +39,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 
 $id=$_POST["id"];
 $role=$_POST["role"];
@@ -55,7 +55,7 @@ echo '<script language="javascript">';
       echo 'alert("Actualizacion del id ' . $id . ' con el nombre '. $role .' en la base de datos");document.location.href="ListRoles.php"';
       echo '</script>';
 
-?>
+}?>
 
 </body>
 </html>
