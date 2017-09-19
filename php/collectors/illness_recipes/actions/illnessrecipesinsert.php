@@ -32,14 +32,6 @@ if (isset($_SESSION['MiSession'])) {
 
 if (isset($_SESSION['MiAdmin'])){
 
-
-  
-
-
-
-  #echo "<p> Hola Usuario: " . $_SESSION['MiSesion']. "    <a href='salir.php' class='btn btn-info' role='button'>Salir</a>";
- 
-
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
   echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
@@ -56,20 +48,79 @@ include_once("../IllnessRecipesCollector.php");
 include_once("../../../classes/IllnessRecipes.php");
 $IllnessRecipesCollectorObj = new IllnessRecipesCollector();
 $ObjIllnessRecipes = new IllnessRecipes($id, $illnessid, $recipesid);
+
+
+include_once("../../recipes/RecipesCollector.php");
+include_once("../../illness/IllnessCollector.php");
+
+$illness= new IllnessCollector();
+$illnessList=$illness->showsIllness();
+
+$recipes=new RecipesCollector();
+$recipesList=$recipes->showsRecipes();
 ?>
 <div class="container">
   <h2>New Illness Recipes</h2>
   <form class="form-horizontal" action="illnessrecipescreateindatabase.php" method="post">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Illness Id:</label>
+      <label class="control-label col-sm-2" for="pwd">Illness:</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" id="pwd" name="illnessid" value="<?php echo $ObjIllnessRecipes->setIllnessId($illnessid); ?>" />
+        <select name="illnessid">
+        <?php
+          $cont=0;
+          $id=0;
+          $combobit="";
+         foreach ($illnessList as $datos){ //Hace foreach de cada row del fetch de la base
+          $cont=0;
+          $id=0;
+            foreach ($datos as $datosx){ //Hace foreach de cada row del fetch de la base
+              if($cont==1)
+              {
+                  $combobit .="<option value='".$id."'>".$datosx."</option>";
+              }
+              else
+              {
+                $cont=$cont+1;
+                if($cont==1)
+                $id=$datosx;
+              }
+            }
+          }
+          echo $combobit;
+            
+        ?>
+        </select>
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Recipes Id:</label>
+      <label class="control-label col-sm-2" for="pwd">Recipes:</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" id="pwd" name="recipesid" value="<?php echo $ObjIllnessRecipes->setRecipesId($recipesid); ?>" />
+        <select name="recipesid">
+        <?php
+          $cont=0;
+          $id=0;
+          $combobit="";
+         foreach ($recipesList as $datos){ //Hace foreach de cada row del fetch de la base
+          $cont=0;
+          $id=0;
+            foreach ($datos as $datosx){ //Hace foreach de cada row del fetch de la base
+              echo $id;
+              if($cont==5)
+              {
+                  $combobit .="<option value='".$id."'>".$datosx."</option>";
+              }
+              else
+              {
+                $cont=$cont+1;
+                if($cont==1)
+                $id=$datosx;
+              }
+            }
+          }
+          echo $combobit;
+            
+        ?>
+        </select>
       </div>
     </div>
     <div class="form-group">        
