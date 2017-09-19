@@ -35,7 +35,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 
 $id=$_GET["id"];
 
@@ -46,7 +46,7 @@ $RolesCollectorObj->deleteRole($id);
 echo '<script language="javascript">';
       echo 'alert("Eliminacion del id ' . $id . ' en la base de datos");document.location.href="ListRoles.php"';
       echo '</script>';
-?>
+}?>
       
 </body>
 </html>
