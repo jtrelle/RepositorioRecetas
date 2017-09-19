@@ -50,7 +50,7 @@ $ObjComments = $CommentsCollectorObj->showComment($id);
 
 
 <div class="container">
-  <h2>EDITAR</h2>
+  <h2>Editar Comments</h2>
   <form class="form-horizontal" action="UpdateComments.php" method="post">
 
     <div class="form-group">
