@@ -8,7 +8,7 @@ if (isset($_SESSION['MiSession'])) {
 
 
 if (isset($_SESSION['MiAdmin'])){
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +29,7 @@ if (isset($_SESSION['MiAdmin'])){
       <a class="navbar-brand" href="../../../../index.php">Choice Home</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-<?php
+
 
 
 
