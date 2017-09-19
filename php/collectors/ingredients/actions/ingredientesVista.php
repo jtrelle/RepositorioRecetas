@@ -52,8 +52,8 @@ $IngredientCollectorObj = new IngredientCollector();
   echo "   <tr>";
   echo "   <th>Id</th>";
   echo "   <th>Ingredientes</th>";
-  echo "   <th>IdPorciones</th>";  
-  echo "   <th>IdReceta</th>";     
+  echo "   <th>Porcion</th>";  
+  echo "   <th>Receta</th>";     
   echo "   <th>Acciones</th>"; 
   echo "   </tr>";
   echo " </thead>";
@@ -69,7 +69,7 @@ foreach ($IngredientCollectorObj->showIngredients() as $c){
 echo "</tbody>";
 echo "</table>";
 echo "</div>";
-echo "<div><a href='ingredientInsert.php' class='btn btn-info' role='button'>New Demo</a></div></div>";
+echo "<div><a href='ingredientInsert.php' class='btn btn-info' role='button'>New Ingredient</a></div></div>";
 
   echo "</ul>";
   echo "</div>";
