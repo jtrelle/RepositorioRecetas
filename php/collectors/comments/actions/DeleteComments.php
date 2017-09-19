@@ -37,7 +37,6 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
 
 
 $id=$_GET["id"];
@@ -50,5 +49,7 @@ echo '<script language="javascript">';
       echo 'alert("Eliminacion del id ' . $id . ' en la base de datos");document.location.href="ListComments.php"';
       echo '</script>';
 ?>
+      }
+
 </body>
 </html>
