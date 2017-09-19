@@ -1,5 +1,12 @@
 <?php
 session_start();
+if (isset($_SESSION['MiSession'])) {
+      echo '<script language="javascript">';
+      echo 'alert("No tiene autorización para esta página.");document.location.href="../../../../index.php"';
+      echo '</script>';
+    }
+
+if (isset($_SESSION['MiAdmin'])){
 ?>
 
 <!DOCTYPE html>
@@ -23,20 +30,14 @@ session_start();
     <ul class="nav navbar-nav navbar-right">
 <?php
 
-if (isset($_SESSION['MiSession'])) {
-      echo '<script language="javascript">';
-      echo 'alert("No tiene autorización para esta página.");document.location.href="../../../../index.php"';
-      echo '</script>';
-    }
 
-if (isset($_SESSION['MiAdmin'])){
 
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
   echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 
 $id=$_GET["id"];
 
@@ -52,3 +53,7 @@ echo '<script language="javascript">';
 
 </body>
 </html>
+<?php } else 
+{
+  echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../../index.php'>";     
+} ?> 
