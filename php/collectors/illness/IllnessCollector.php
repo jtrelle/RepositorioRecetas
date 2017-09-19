@@ -17,7 +17,7 @@ class IllnessCollector extends Collector
     return $arrayIllness;        
   }
 
-  //Envia el id para editar el campo en el php
+  #Envia el id para editar el campo en el php
 
   function showIllness($id){
     $row = self::$db->getRows("SELECT * FROM illness WHERE id= ?", array("{$id}"));
@@ -30,6 +30,8 @@ class IllnessCollector extends Collector
   }
 
   function deleteIllness($id){
+    $deleterow = self::$db->deleteRow("DELETE FROM public.illness_recipes WHERE illness_id= ?", array("{$id}"));
+    
     $deleterow = self::$db->deleteRow("DELETE FROM public.illness WHERE id= ?", array("{$id}"));
     
   }
