@@ -36,7 +36,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 
 $portion=$_POST["portion"];
 $id=$_POST["id"];
@@ -48,6 +48,6 @@ $PortionCollector->updatePortion($id, $portion);
 echo '<script language="javascript">';
 echo 'alert("Actualizacion del id ' . $id . ' con el nombre '. $portion .' en la base de datos");document.location.href="portionVista.php"';
 echo '</script>';
-?>
+}?>
 </body>
 </html>
