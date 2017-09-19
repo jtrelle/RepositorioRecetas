@@ -54,7 +54,7 @@ $ObjComments= new Comments($id,$email,$message,$users_id);
 ?>
 
 <div class="container">
-  <h2>Crear eComments</h2>
+  <h2>Crear Comments</h2>
   <form class="form-horizontal" action="formdemocreate.php" method="post">
     
 
