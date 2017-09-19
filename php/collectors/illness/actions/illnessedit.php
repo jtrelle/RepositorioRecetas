@@ -82,6 +82,7 @@ $ObjIllness = $IllnessCollectorObj->showIllness($id);
     </div>
   </form>
 </div>
-}?>
+
 </body>
 </html>
+            }?>
