@@ -35,14 +35,6 @@ if (isset($_SESSION['MiSession'])) {
 
 if (isset($_SESSION['MiAdmin'])){
 
-
-  
-
-
-
-  #echo "<p> Hola Usuario: " . $_SESSION['MiSesion']. "    <a href='salir.php' class='btn btn-info' role='button'>Salir</a>";
- 
-
   echo "<li><p class='navbar-brand'> Bienvenido Usuario: " . $_SESSION['MiAdmin'] . "</p></li>";
   echo "<li><a href='../../users/actions/salir.php'><span class='glyphicon glyphicon-log-out'></span> Salir </a></li>";
   echo "</ul>";
@@ -59,8 +51,8 @@ $IllnessRecipesCollectorObj = new IllnessRecipesCollector();
   echo "  <thead>";
   echo "   <tr>";
   echo "   <th>Id</th>";
-  echo "   <th>Illness_Id</th>";
-  echo "   <th>Recipes_Id</th>";
+  echo "   <th>Illness</th>";
+  echo "   <th>Recipes</th>";
   echo "   <th>Accions</th>";
   echo "   </tr>";
   echo " </thead>";
