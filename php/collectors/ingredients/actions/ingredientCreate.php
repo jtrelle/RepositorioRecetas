@@ -52,7 +52,7 @@ echo '<script language="javascript">';
 echo 'alert("Creación de '. $ingredient .' en la base de datos");document.location.href="ingredientesVista.php"';
 echo '</script>';
 
-
+?>
 </div>
 </body>
 </html>
