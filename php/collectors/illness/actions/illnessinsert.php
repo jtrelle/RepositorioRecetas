@@ -72,6 +72,6 @@ $ObjIllness = new Illness($id,$name);
     </div>
   </form>
 </div>
-      <?php }>
+      <?php } ?>
 </body>
 </html>
