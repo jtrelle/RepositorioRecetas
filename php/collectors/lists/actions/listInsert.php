@@ -37,7 +37,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 
 $name="";
 $id="";
@@ -45,7 +45,7 @@ include_once("../ListCollector.php");
 include_once("../../../classes/Lists.php");
 $ListCollectorObj = new ListCollector();
 $ObjList = new Lists($id,$name);
-?>
+}?>
 <div class="container">
   <h2>Crear el Objeto Ingrediente</h2>
   <form class="form-horizontal" action="listCreate.php" method="post">
