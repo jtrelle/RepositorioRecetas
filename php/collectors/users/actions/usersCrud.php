@@ -151,28 +151,6 @@ echo "</div>";
 
 
 
-
-<?php
-
-
-
-
-
-
-
-
-}
-
-
-
-else{
-  echo "</ul>";
-  echo "</div>";
-  echo "</nav>";
-  ?>
-
-
-
     
 
 </div>
