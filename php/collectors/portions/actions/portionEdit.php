@@ -37,7 +37,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 
 $id =1;
 //Obtener el valor del ID que viene del metodo GET a traves de http
@@ -46,7 +46,7 @@ include_once("../PortionCollector.php");
 include_once("../../../classes/Portions.php");
 $PortionCollectorObj = new PortionCollector();
 $ObjPortion = $PortionCollectorObj->showPortion($id);
-?>
+
 <div class="container">
   <h2>Editar Ingrediente</h2>
   <form class="form-horizontal" action="portionUpdate.php" method="post">
@@ -71,5 +71,6 @@ $ObjPortion = $PortionCollectorObj->showPortion($id);
     </div>
   </form>
 </div>
+        }?>
 </body>
 </html>
