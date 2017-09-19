@@ -39,6 +39,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
+  }
 $id =1;
 
 include_once("../ListCollector.php");
@@ -70,7 +71,7 @@ echo "<div><a href='listInsert.php' class='btn btn-info' role='button'>New List<
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 
 ?>
 
