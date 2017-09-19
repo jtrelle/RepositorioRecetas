@@ -99,3 +99,12 @@ if (isset($_SESSION['MiAdmin'])){
 </div>
 </body>
 </html>
+	
+	
+	  <?php 
+}
+else 
+{
+  echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../../index.php'>";     
+}
+?> 
