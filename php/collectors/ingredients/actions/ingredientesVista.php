@@ -81,4 +81,7 @@ echo "<div><a href='ingredientInsert.php' class='btn btn-info' role='button'>New
 </body>
 </html>
   
-<?php } ?>
+<?php } else 
+{
+  echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../../index.php'>";     
+}?>
