@@ -36,7 +36,6 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
 
 $email=$_POST["email"];
 $message=$_POST["message"];
@@ -50,8 +49,9 @@ echo '<script language="javascript">';
 echo 'alert("Creación de la informacion en la base de datos");document.location.href="ListComments.php"';
 echo '</script>';
 
+}
 ?>
-          }
+          
 
 </body>
 </html>
