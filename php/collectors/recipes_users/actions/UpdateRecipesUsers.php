@@ -46,7 +46,7 @@ $RecipesUsersCollectorObj->updateRecipesUsers($id,$recipes_id,$users_id);
 echo '<script language="javascript">';
 echo 'alert("Actualizacion del id ' . $id . ' en la base de datos");document.location.href="ListRecipesUsers.php"';
 echo '</script>';
-}?>
+?>
 
 </body>
 </html>
