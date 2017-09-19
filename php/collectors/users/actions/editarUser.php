@@ -16,6 +16,17 @@ $objUser = $userCollectorObj->showUser($idU);
 $objPeople = $userCollectorObj->showPeople($idP);
 
 
+if (isset($_SESSION['MiSession'])) {
+			echo '<script language="javascript">';
+			echo 'alert("No tiene autorización para esta página.");document.location.href="../../../../index.php"';
+			echo '</script>';
+		}
+
+
+if (isset($_SESSION['MiAdmin'])){
+
+
+
 
 ?>
 
@@ -42,13 +53,6 @@ $objPeople = $userCollectorObj->showPeople($idP);
 
 
 <?php
-
-if (isset($_SESSION['MiSession'])) {
-			echo '<script language="javascript">';
-			echo 'alert("No tiene autorización para esta página.");document.location.href="../../../../index.php"';
-			echo '</script>';
-		}
-
 
   #echo "<p> Hola Usuario: " . $_SESSION['MiSesion']. "    <a href='salir.php' class='btn btn-info' role='button'>Salir</a>";
  
@@ -120,3 +124,4 @@ if (isset($_SESSION['MiSession'])) {
 </div>
 </body>
 </html>
+<?php } ?>
