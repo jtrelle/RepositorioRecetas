@@ -37,14 +37,14 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 //Obtener el valor del ID que viene del metodo GET a traves de http
 $id=$_GET["id"];
 include_once("../ListCollector.php");
 include_once("../../../classes/Lists.php");
 $ListCollectorObj = new ListCollector();
 $ObjList = $ListCollectorObj->showList($id);
-?>
+
 <div class="container">
   <h2>Editar el Ingrediente</h2>
   <form class="form-horizontal" action="listUpdate.php" method="post">
@@ -70,5 +70,6 @@ $ObjList = $ListCollectorObj->showList($id);
     </div>
   </form>
 </div>
+        }?>
 </body>
 </html>
