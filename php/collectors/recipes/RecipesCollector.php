@@ -32,6 +32,14 @@ class RecipesCollector extends Collector
   }
 
   function deleteRecipes($id){
+    $deleterecipesusersrow = self::$db->deleteRow("DELETE FROM public.recipes_users WHERE recipes_id = ?", array("{$id}"));
+
+    $deleteingredientrow = self::$db->deleteRow("DELETE FROM public.ingredients WHERE recipes_id= ?", array("{$id}"));
+
+    $deleteillnessrecipesrow = self::$db->deleteRow("DELETE FROM public.illness_recipes WHERE recipes_id= ?", array("{$id}"));
+    
+    
+
     $deleterow = self::$db->deleteRow("DELETE FROM public.recipes WHERE id= ?", array("{$id}"));
     
   }
