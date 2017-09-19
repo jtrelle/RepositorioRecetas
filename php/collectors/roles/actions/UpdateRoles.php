@@ -55,7 +55,7 @@ echo '<script language="javascript">';
       echo 'alert("Actualizacion del id ' . $id . ' con el nombre '. $role .' en la base de datos");document.location.href="ListRoles.php"';
       echo '</script>';
 
-}?>
+?>
 
 </body>
 </html>
