@@ -41,14 +41,17 @@ if (isset($_SESSION['MiAdmin'])){
 
 $id=$_GET["id"];
 
-include_once("../ListCollector.php");
+/*include_once("../ListCollector.php");
 
 $ListCollectorObj = new ListCollector();
-$ListCollectorObj->deleteList($id);
-
+$ListCollectorObj->deleteList($id);*/
 echo '<script language="javascript">';
-echo 'alert("Eliminacion del id ' . $id . ' en la base de datos");document.location.href="listVista.php"';
+echo 'alert("No se puede eliminar en la base de datos");document.location.href="listVista.php"';
 echo '</script>';
+
+/*echo '<script language="javascript">';
+echo 'alert("Eliminacion del id ' . $id . ' en la base de datos");document.location.href="listVista.php"';
+echo '</script>';*/
 ?>
 
 </body>
