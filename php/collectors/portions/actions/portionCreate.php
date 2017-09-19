@@ -36,7 +36,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 
 $portion=$_POST["portion"];
 
@@ -47,6 +47,6 @@ echo '<script language="javascript">';
 echo 'alert("Creación de '. $portion .' en la base de datos");document.location.href="portionVista.php"';
 echo '</script>';
 
-?>
+}?>
 </body>
 </html>
