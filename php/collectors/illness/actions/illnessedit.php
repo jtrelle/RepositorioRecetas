@@ -45,7 +45,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 
 
 
@@ -80,6 +80,7 @@ $ObjIllness = $IllnessCollectorObj->showIllness($id);
       </div>
     </div>
   </form>
+<?php } ?>
 </div>
 </body>
 </html>
