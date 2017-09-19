@@ -36,7 +36,6 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
 
 $id="";
 $role="";
@@ -74,5 +73,7 @@ $ObjRoles = new Roles($id,$role);
     </div>
   </form>
 </div>
+      }
+
 </body>
 </html>
