@@ -8,12 +8,12 @@ class IngredientCollector extends Collector
   
   function showIngredients() {
     $rows = self::$db->getRows("SELECT * FROM ingredients "); //Recibe el fetch
-							/*Self llama la instancia del objeto para 
-							llegar al método getRows:
+              /*Self llama la instancia del objeto para 
+              llegar al método getRows:
 
-								class Collector extends dataBase
-								{
-						  			public static $db;  -->llama a este $db */	        
+                class Collector extends dataBase
+                {
+                    public static $db;  -->llama a este $db */          
  
    
     $arrayIngredients= array();  //SE crea el arreglo donde se guardaran los objetos demo      
@@ -21,13 +21,15 @@ class IngredientCollector extends Collector
 
   $recipes = self::$db->getRows("SELECT name FROM recipes WHERE id =".$c{'recipes_id'});
         $recipesname = $recipes[0]{'name'};
-
-  #$user = self::$db->getRows("SELECT username FROM users WHERE id =".$c{'users_id'});
-        #$username = $user[0]{'username'};
-
+  $portion = self::$db->getRows("SELECT portion FROM portions WHERE id =".$c{'portions_id'});
+  $portionname = $portion[0]{'portion'};
+/*
+  $user = self::$db->getRows("SELECT username FROM users WHERE id =".$c{'users_id'});
+        $username = $user[0]{'username'};
+*/
 
       
-      $aux = new Ingredients($c{'id'},$c{'ingredient'},$c{'recipes_id'},$c{'portions_id'}); //Crea el nuevo objeto demo
+      $aux = new Ingredients($c{'id'},$c{'ingredient'},$recipesname,$portionname); //Crea el nuevo objeto demo
       
       array_push($arrayIngredients, $aux); 
     }
