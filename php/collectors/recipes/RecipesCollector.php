@@ -10,7 +10,10 @@ class RecipesCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM recipes ");    //arreglo de objetos bidimensionales    
     $arrayRecipes= array();        
     foreach ($rows as $c){  //Objeto illness
-      $aux = new Recipes($c{'id'}, $c{'image'}, $c{'preparation'}, $c{'lists_id'}, $c{'description'}, $c{'name'}); //Crea un objeto illness
+      $listquery = self::$db->getRows("SELECT name FROM lists WHERE id =".$c{'lists_id'});
+      $listname = $listquery[0]{'name'};
+
+      $aux = new Recipes($c{'id'}, $c{'image'}, $c{'preparation'}, $listname, $c{'description'}, $c{'name'}); //Crea un objeto illness
       array_push($arrayRecipes, $aux); //Guarda una coleccion de demo
     }
     return $arrayRecipes;        
