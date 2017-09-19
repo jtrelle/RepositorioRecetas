@@ -39,7 +39,6 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
 
 $id ="";
 //Obtener el valor del ID que viene del metodo GET a traves de http
