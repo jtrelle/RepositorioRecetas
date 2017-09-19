@@ -36,7 +36,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
       
 $recipes_id=$_POST["recipes_id"];
 $users_id=$_POST["users_id"];
@@ -50,7 +50,7 @@ echo '<script language="javascript">';
 echo 'alert("Creación de la informacion en la base de datos");document.location.href="ListRecipesUsers.php"';
 echo '</script>';
 
-?>
+}?>
 
 </body>
 </html>
