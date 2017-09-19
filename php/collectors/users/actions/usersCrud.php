@@ -1,5 +1,13 @@
 <?php
 session_start();
+if (isset($_SESSION['MiSession'])) {
+			echo '<script language="javascript">';
+			echo 'alert("No tiene autorización para esta página.");document.location.href="../../../../index.php"';
+			echo '</script>';
+		}
+
+
+if (isset($_SESSION['MiAdmin'])){
 
 
 
@@ -30,14 +38,6 @@ session_start();
 
 <?php
 
-if (isset($_SESSION['MiSession'])) {
-			echo '<script language="javascript">';
-			echo 'alert("No tiene autorización para esta página.");document.location.href="../../../../index.php"';
-			echo '</script>';
-		}
-
-
-if (isset($_SESSION['MiAdmin'])){
 
 
 	
