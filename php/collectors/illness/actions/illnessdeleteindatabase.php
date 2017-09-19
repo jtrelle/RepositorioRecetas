@@ -37,7 +37,7 @@ if (isset($_SESSION['MiAdmin'])){
   echo "</ul>";
   echo "</div>";
   echo "</nav>";
-}
+
 
 $id=$_GET["id"];
 
@@ -47,7 +47,7 @@ $IllnessCollectorObj->deleteIllness($id);
 echo '<script language="javascript">';
       echo 'alert("Eliminacion del id ' . $id . ' en la base de datos");document.location.href="illnesslist.php"';
       echo '</script>';
-?>
+} ?>
 
 </body>
 </html>
