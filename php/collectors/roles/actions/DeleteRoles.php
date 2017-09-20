@@ -42,11 +42,17 @@ $id=$_GET["id"];
 
 include_once("../RolesCollector.php");
 
+if ($id == 1 || $id == 2){
+  echo '<script language="javascript">';
+      echo 'alert("El id ' . $id . ' es fundamental en la base de datos");document.location.href="ListRoles.php"';
+      echo '</script>';
+    }else{
 $RolesCollectorObj = new RolesCollector();
 $RolesCollectorObj->deleteRole($id);
 echo '<script language="javascript">';
       echo 'alert("Eliminacion del id ' . $id . ' en la base de datos");document.location.href="ListRoles.php"';
       echo '</script>';
+    }
 ?>
       
 </body>
