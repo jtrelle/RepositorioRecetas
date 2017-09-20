@@ -127,4 +127,7 @@ $List=$lis->showLists();
 </div>
 </body>
 </html>
-<?php } ?> 
+<?php } else 
+{
+  echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../../index.php'>";     
+} ?>  
