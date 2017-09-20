@@ -76,4 +76,7 @@ $ObjIllness = new Illness($id,$name);
 
 </body>
 </html>
-      <?php } ?>
+      <?php } else 
+{
+  echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../../index.php'>";     
+} ?> 
