@@ -75,7 +75,7 @@ $ObjComments= new Comments($id,$email,$message,$users_id);
 
 
     <div class="form-group">
-      <label class="control-label col-sm-2" for="Usuario">Users:</label>
+      <label class="control-label col-sm-2" for="Usuario">Id User:</label>
       <div class="col-sm-10">
         <input type="text" class="form-control" name="users_id" value="<?php echo $ObjComments->setUserId($users_id); ?>" autofocus required/>
     </div>
